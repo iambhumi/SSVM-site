@@ -26,6 +26,7 @@ const navItems = [
       { label: "School's Achievements", path: "/school-achievements" },
     ],
   },
+  { label: "Facility", path: "/facility" },
   { label: "Faculty", path: "/faculty" },
   { label: "Student Alumni", path: "/alumni" },
   {

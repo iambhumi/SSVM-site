@@ -8,12 +8,14 @@ import Curriculum from "./pages/Curriculum";
 import StudentAchievements from "./pages/StudentAchievements";
 import SchoolAchievements from "./pages/SchoolAchievements";
 import Faculty from "./pages/Faculty";
+import Facility from "./pages/Facility";
 import Alumni from "./pages/Alumni";
 import Events from "./pages/Events";
 import Notices from "./pages/Notices";
 import Announcements from "./pages/Announcements";
 import PhotoAlbum from "./pages/PhotoAlbum";
 import Contact from "./pages/Contact";
+
 
 export default function App() {
   return (
@@ -28,6 +30,7 @@ export default function App() {
           <Route path="student-achievements" element={<StudentAchievements />} />
           <Route path="school-achievements" element={<SchoolAchievements />} />
           <Route path="faculty" element={<Faculty />} />
+          <Route path="facility" element={<Facility />} />
           <Route path="alumni" element={<Alumni />} />
           <Route path="events" element={<Events />} />
           <Route path="notices" element={<Notices />} />
