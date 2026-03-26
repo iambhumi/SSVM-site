@@ -48,10 +48,10 @@ export default function Navbar() {
     <nav className="navbar">
       {/* Logo + School Name */}
       <div className="navbar-brand">
-        <img src="/logo.png" alt="School Logo" className="logo" />
+        <img src="/Logo.jpeg" alt="School Logo" className="logo" />
         <div className="school-name">
-          <span className="name-odia">ସରସ୍ୱତୀ ଶିଶୁ ବିଦ୍ୟା ମନ୍ଦିର</span>
-          <span className="name-english">Saraswati Sishu Vidya Mandir</span>
+          <span className="name-odia">ଶାରଦା ବିଦ୍ୟା ମନ୍ଦିର</span>
+          <span className="name-english">Sarada Vidya Mandir</span>
         </div>
       </div>
 
