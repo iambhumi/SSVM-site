@@ -113,7 +113,7 @@ export default function Home() {
             className="w-28 h-28 rounded-full border-4 border-yellow-400
                        object-cover object-center shadow-2xl"
           />
-          <h1 className="text-yellow-400 text-3xl md:text-5xl font-bold
+          <h1 className="text-yellow-400 text-4xl md:text-4xl font-bold
                          tracking-wide drop-shadow-lg">
             ଶାରଦା ବିଦ୍ୟା ମନ୍ଦିର
           </h1>
@@ -123,7 +123,7 @@ export default function Home() {
           </h2>
           <div className="w-24 h-1 bg-yellow-400 rounded-full" />
           <p className="text-gray-300 text-sm md:text-base tracking-wide">
-            📍 Bhadrak, Odisha &nbsp;|&nbsp; Odia Medium School &nbsp;|&nbsp; Est. 1995
+            📍 Bhadrak, Odisha &nbsp;|&nbsp; Odia Medium School &nbsp;|&nbsp; Est. 2002
           </p>
           <div className="transition-all duration-700">
             <p className="text-yellow-200 text-lg md:text-2xl font-semibold italic">

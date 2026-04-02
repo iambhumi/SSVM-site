@@ -172,8 +172,12 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <span className="text-yellow-400 mt-0.5">📍</span>
                 <span>
-                  Sarada Vidya Mandir,<br />
-                  Bhadrak, Odisha — 769001
+              
+                  SARADA VIDYAMANDIR <br />
+                  AT/PO :BHANDARIPOKHARI <br/>
+                  DIST :BHADRAK <br/>
+                  ODISHA <br/>
+                  PIN :756120<br/>
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -207,7 +211,7 @@ export default function Footer() {
         <div className="border-t border-white/10 py-5 px-6">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center
                           justify-between gap-2 text-xs text-gray-500">
-            <p>© 2026 Sarada Vidya Mandir, Rourkela. All Rights Reserved.</p>
+            <p>© 2026 Sarada Vidya Mandir, Bhadrak. All Rights Reserved.</p>
             <p>
               Designed & Developed by{" "}
               <span className="text-yellow-400 font-semibold">SwiftRise</span>

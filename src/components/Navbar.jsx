@@ -46,7 +46,8 @@ export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   return (
-    <nav className="navbar">
+    <nav className="bg-red-900 w-full shadow-md">
+      <div className="max-w-8xl mx-auto px-6 flex items-center justify-between h-20">
       {/* Logo + School Name */}
       <div className="navbar-brand">
         <img src="/Logo.jpeg" alt="School Logo" className="logo" />
@@ -93,6 +94,7 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
+      </div>
     </nav>
   );
 }
