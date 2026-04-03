@@ -21,8 +21,8 @@
 }
 
 .logo {
-  width: 48px;   /* ✅ Smaller — fits single line */
-  height: 48px;
+  width: 55px;   /* ✅ Smaller — fits single line */
+  height: 55px;
   border-radius: 50%;
   border: 2px solid #FFD700;
   object-fit: cover;
@@ -35,14 +35,14 @@
 }
 
 .name-odia {
-  font-size: 14px;  /* ✅ FIXED — was 18px */
+  font-size: 15px;  /* ✅ FIXED — was 18px */
   font-weight: bold;
   color: #FFD700;
   white-space: nowrap;
 }
 
 .name-english {
-  font-size: 11px;  /* ✅ FIXED — was 16px */
+  font-size: 15px;  /* ✅ FIXED — was 16px */
   color: #ffffff;
   letter-spacing: 1px;
   white-space: nowrap;
@@ -52,7 +52,7 @@
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2px;         /* ✅ Tighter gap */
+  gap: 4px;         /* ✅ Tighter gap */
   margin: 0;
   padding: 0;
   align-items: center;
@@ -67,9 +67,9 @@
 .nav-link {
   color: white;
   text-decoration: none;
-  font-size: 12px;   /* ✅ Consistent small size */
+  font-size: 15px;   /* ✅ Consistent small size */
   font-weight: 600;
-  padding: 5px 7px;
+  padding: 8px 7px;
   display: block;
   cursor: pointer;
   transition: background 0.2s;
@@ -79,9 +79,9 @@
 
 .dropdown-trigger {
   color: white;
-  font-size: 12px;   /* ✅ FIXED — was 18px! This was the main bug */
+  font-size: 15px;   /* ✅ FIXED — was 18px! This was the main bug */
   font-weight: 600;
-  padding: 5px 7px;
+  padding: 8px 7px;
   display: block;
   cursor: pointer;
   transition: background 0.2s;
@@ -117,7 +117,7 @@
   display: block;
   padding: 8px 14px;
   color: #333;
-  font-size: 13px;   /* ✅ FIXED — was 18px! */
+  font-size: 15px;   /* ✅ FIXED — was 18px! */
   font-weight: 500;
   text-decoration: none;
   transition: background 0.2s;
@@ -174,10 +174,10 @@
 
   .dropdown li a {
     color: #FFD700;
-    font-size: 13px;
+    font-size: 14px;
   }
 
-  .name-odia { font-size: 13px; }
+  .name-odia { font-size: 18px; }
   .name-english { font-size: 10px; }
   .logo { width: 40px; height: 40px; }
 }
