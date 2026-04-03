@@ -47,7 +47,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-red-900 w-full shadow-md">
-      <div className="max-w-8xl mx-auto px-6 flex items-center justify-between h-20">
+      <div className="max-w-10xl mx-auto px-6 flex items-center justify-between h-20">
       {/* Logo + School Name */}
       <div className="navbar-brand">
         <img src="/Logo.jpeg" alt="School Logo" className="logo" />
