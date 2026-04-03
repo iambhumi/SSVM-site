@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: #8B0000;
-  padding: 15px 35px;
+  padding: 10px 25px;
   position: sticky;
   top: 5;
   z-index: 1000;
@@ -15,7 +15,7 @@
 .navbar-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .logo {
@@ -33,13 +33,13 @@
 }
 
 .name-odia {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   color: #FFD700;
 }
 
 .name-english {
-  font-size: 12px;
+  font-size: 16px;
   color: #ffffff;
   letter-spacing: 1px;
 }
@@ -48,7 +48,7 @@
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 8px;
+  gap: 9px;
   margin: 0;
   padding: 0;
   align-items: center;
@@ -61,9 +61,9 @@
 .nav-link {
   color: white;
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px 10px;
   display: block;
   cursor: pointer;
   transition: background 0.2s;
@@ -74,11 +74,11 @@
   color: white;
   font-size: 18px;
   font-weight: 500;
-  padding: 8px 12px;
+  padding: 5px 10px;
   display: block;
   cursor: pointer;
   transition: background 0.2s;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 .nav-link:hover,
@@ -94,10 +94,10 @@
   left: 0;
   background: white;
   border: 1px solid #ddd;
-  min-width: 200px;
+  min-width: 150px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 999;
-  border-radius: 4px;
+  border-radius: 8px;
   list-style: none;
   padding: 4px 0;
   margin: 0;
@@ -105,7 +105,7 @@
 
 .dropdown li a {
   display: block;
-  padding: 10px 16px;
+  padding: 8px 10px;
   color: #333;
   font-size: 18px;
   text-decoration: none;
