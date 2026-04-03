@@ -117,7 +117,7 @@ export default function Home() {
                          tracking-wide drop-shadow-lg">
             ଶାରଦା ବିଦ୍ୟା ମନ୍ଦିର
           </h1>
-          <h2 className="text-white text-xl md:text-3xl font-semibold
+          <h2 className="text-white text-lg md:text-2xl font-semibold
                          tracking-widest uppercase">
             Sarada Vidya Mandir
           </h2>

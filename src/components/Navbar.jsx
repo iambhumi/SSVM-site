@@ -6,12 +6,8 @@ import "./Navbar.css";
 const navItems = [
   { label: "Home", path: "/" },
   {
-    label: "About",
-    dropdown: [
-      { label: "About the School", path: "/about" },
-      { label: "Vision & Mission", path: "/vision-mission" },
-      { label: "Principal's Message", path: "/principal-message" },
-    ],
+    label: "About", path: "/about",
+   
   },
   {
     label: "Academics / Scholastic",
@@ -35,7 +31,7 @@ const navItems = [
       { label: "Events", path: "/events" },
       { label: "Notices", path: "/notices" },
       { label: "Announcements", path: "/announcements" },
-      { label: "Photo Album", path: "/photo-album" },
+      
     ],
   },
   { label: "Contact Us", path: "/contact" },
@@ -47,7 +43,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-red-900 w-full shadow-md">
-      <div className="max-w-11xl mx-auto px-6 flex items-center justify-between h-20">
+      <div className="max-w-11xl mx-auto px-10 flex items-center justify-between h-20">
       {/* Logo + School Name */}
       <div className="navbar-brand">
         <img src="/Logo.jpeg" alt="School Logo" className="logo" />

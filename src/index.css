@@ -19,3 +19,73 @@ body {
 .animate-marquee {
   animation: marquee 20s linear infinite;
 }
+
+/* ── Page transition fade-in ── */
+.page-enter {
+  animation: fadeUp 0.4s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Section headings — gold underline accent ── */
+.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #FFD700, #b8860b);
+  border-radius: 999px;
+}
+
+/* ── Card hover lift ── */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(139, 0, 0, 0.12);
+}
+
+/* ── Gold shimmer button ── */
+.btn-gold {
+  background: linear-gradient(135deg, #FFD700, #f5a623);
+  color: #8B0000;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 10px 28px;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+.btn-gold:hover {
+  background: linear-gradient(135deg, #ffe066, #FFD700);
+  transform: scale(1.03);
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.4);
+}
+
+/* ── Red divider ── */
+.divider-red {
+  width: 60px;
+  height: 3px;
+  background: #8B0000;
+  border-radius: 999px;
+  margin: 12px auto;
+}

@@ -4,25 +4,26 @@
   align-items: center;
   justify-content: space-between;
   background-color: #8B0000;
-  padding: 8px 24px;
+  padding: 15px 36px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  flex-wrap: nowrap; /* ✅ FIXED — was "wrap", caused 2-line navbar */
-  min-height: 64px;
+  flex-wrap: nowrap;
+  min-height: 68px;
 }
 
-/* ── LOGO + SCHOOL NAME ── */
+/* ── LOGO ── */
 .navbar-brand {
   display: flex;
   align-items: center;
   gap: 10px;
-  flex-shrink: 0; /* ✅ Logo never shrinks */
+  flex-shrink: 0;
+  text-decoration: none;
 }
 
 .logo {
-  width: 55px;   /* ✅ Smaller — fits single line */
-  height: 55px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   border: 2px solid #FFD700;
   object-fit: cover;
@@ -35,14 +36,14 @@
 }
 
 .name-odia {
-  font-size: 15px;  /* ✅ FIXED — was 18px */
+  font-size: 15px;
   font-weight: bold;
   color: #FFD700;
   white-space: nowrap;
 }
 
 .name-english {
-  font-size: 15px;  /* ✅ FIXED — was 16px */
+  font-size: 15px;
   color: #ffffff;
   letter-spacing: 1px;
   white-space: nowrap;
@@ -52,40 +53,42 @@
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 4px;         /* ✅ Tighter gap */
+  gap: 5px;
   margin: 0;
   padding: 0;
   align-items: center;
-  flex-wrap: nowrap; /* ✅ Never wrap */
+  flex-wrap: nowrap;
 }
 
 .nav-item {
   position: relative;
-  white-space: nowrap; /* ✅ Each item stays on one line */
+  white-space: nowrap;
 }
 
 .nav-link {
   color: white;
   text-decoration: none;
-  font-size: 15px;   /* ✅ Consistent small size */
-  font-weight: 600;
-  padding: 8px 7px;
+  font-size: 15px;
+  font-weight: 900;
+  padding: 2px 8px;
   display: block;
   cursor: pointer;
-  transition: background 0.2s;
-  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 5px;
   white-space: nowrap;
 }
 
 .dropdown-trigger {
   color: white;
-  font-size: 15px;   /* ✅ FIXED — was 18px! This was the main bug */
+  font-size: 15px;
   font-weight: 600;
-  padding: 8px 7px;
-  display: block;
+  padding: 8px 11px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   cursor: pointer;
-  transition: background 0.2s;
-  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 5px;
   white-space: nowrap;
   background: none;
   border: none;
@@ -100,36 +103,38 @@
 /* ── DROPDOWN ── */
 .dropdown {
   position: absolute;
-  top: 100%;
+  top: 110%;
   left: 0;
   background: white;
-  border: 1px solid #ddd;
-  min-width: 180px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
+  min-width: 200px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
   z-index: 999;
-  border-radius: 8px;
+  border-radius: 10px;
   list-style: none;
-  padding: 4px 0;
+  padding: 6px 0;
   margin: 0;
 }
 
 .dropdown li a {
   display: block;
-  padding: 8px 14px;
+  padding: 9px 16px;
   color: #333;
-  font-size: 15px;   /* ✅ FIXED — was 18px! */
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 800;
   text-decoration: none;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
   white-space: nowrap;
 }
 
 .dropdown li a:hover {
   background-color: #fff5f5;
   color: #8B0000;
+  padding-left: 20px;
+  transition: all 0.2s;
 }
 
-/* ── HAMBURGER (mobile) ── */
+/* ── HAMBURGER ── */
 .hamburger {
   display: none;
   font-size: 24px;
@@ -140,8 +145,8 @@
   flex-shrink: 0;
 }
 
-/* ── MOBILE RESPONSIVE ── */
-@media (max-width: 900px) {   /* ✅ Raised from 768px — catches more screens */
+/* ── MOBILE ── */
+@media (max-width: 1024px) {
   .nav-links {
     display: none;
     flex-direction: column;
@@ -150,19 +155,9 @@
     padding: 10px 0;
     flex-wrap: wrap;
   }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .navbar {
-    flex-wrap: wrap;
-  }
-
+  .nav-links.open { display: flex; }
+  .hamburger { display: block; }
+  .navbar { flex-wrap: wrap; }
   .dropdown {
     position: static;
     box-shadow: none;
@@ -170,14 +165,7 @@
     background-color: #6b0000;
     padding-left: 15px;
     min-width: unset;
+    border-radius: 0;
   }
-
-  .dropdown li a {
-    color: #FFD700;
-    font-size: 14px;
-  }
-
-  .name-odia { font-size: 18px; }
-  .name-english { font-size: 10px; }
-  .logo { width: 40px; height: 40px; }
+  .dropdown li a { color: #FFD700; font-size: 13px; }
 }
