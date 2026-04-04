@@ -71,11 +71,18 @@ export default function Footer() {
 
           {/* Col 1 — Logo */}
           <div className="flex flex-col items-center text-center gap-4">
+          <Link 
+            to="/"
+            className="flex flex-col items-center gap-3 group"
+            aria-label="Go to Home"
+            style={{ position: "relative", zIndex: 10 }}
+          >
             <img
               src="/Logo.jpeg"
               alt="Sarada Vidya Mandir Logo"
               className="w-24 h-24 rounded-full border-4 border-yellow-400
-                         object-cover shadow-lg"
+                         object-cover shadow-lg group-hover:scale-105
+                 transition-transform duration-200"
             />
             <div>
               <p className="text-yellow-400 font-bold text-lg leading-tight">
@@ -86,6 +93,7 @@ export default function Footer() {
               </p>
               <p className="text-gray-500 text-xs mt-2">Bhadrak, Odisha</p>
             </div>
+          </Link>
             {/* Social Icons */}
             <div className="flex gap-3">
               <a
