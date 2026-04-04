@@ -19,6 +19,13 @@ body {
 .animate-marquee {
   animation: marquee 20s linear infinite;
 }
+/* Fix contact card text wrapping on mobile */
+@media (max-width: 640px) {
+  .contact-card-value {
+    word-break: break-all;
+    font-size: 12px !important;
+  }
+}
 
 /* ── Page transition fade-in ── */
 .page-enter {

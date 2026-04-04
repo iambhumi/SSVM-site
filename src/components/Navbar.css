@@ -143,29 +143,96 @@
   color: white;
   cursor: pointer;
   flex-shrink: 0;
+  z-index :1001;
+}
+
+/* ── HAMBURGER ── */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  flex-shrink: 0;
+  z-index: 1001;
 }
 
 /* ── MOBILE ── */
 @media (max-width: 1024px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  /* ✅ KEY FIX: fixed so it overlays page, not pushes it */
   .nav-links {
     display: none;
     flex-direction: column;
+    position: fixed;        /* was absolute — this was the bug */
+    top: 80px;              /* matches h-20 = 80px */
+    left: 0;
+    right: 0;
     width: 100%;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
     background-color: #8B0000;
-    padding: 10px 0;
-    flex-wrap: wrap;
+    padding: 8px 0 20px 0;
+    z-index: 999;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    overflow-x: hidden;
   }
-  .nav-links.open { display: flex; }
-  .hamburger { display: block; }
-  .navbar { flex-wrap: wrap; }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link,
+  .dropdown-trigger {
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    color: white;
+  }
+
+  .nav-link:hover,
+  .dropdown-trigger:hover {
+    background-color: rgba(255,215,0,0.15);
+    color: #FFD700;
+  }
+
   .dropdown {
     position: static;
     box-shadow: none;
     border: none;
     background-color: #6b0000;
-    padding-left: 15px;
+    padding-left: 0;
     min-width: unset;
     border-radius: 0;
+    width: 100%;
   }
-  .dropdown li a { color: #FFD700; font-size: 13px; }
+
+  .dropdown li {
+    width: 100%;
+  }
+
+  .dropdown li a {
+    color: #FFD700;
+    font-size: 13px;
+    padding: 9px 32px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .dropdown li a:hover {
+    background-color: rgba(255,215,0,0.1);
+    padding-left: 38px;
+    color: #FFD700;
+  }
 }

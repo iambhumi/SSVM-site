@@ -91,7 +91,7 @@ export default function Contact() {
 
       {/* ── CONTACT CARDS STRIP ── */}
       <section className="bg-gray-50 py-10 px-4">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {contactCards.map((c) => (
             <div
               key={c.label}
