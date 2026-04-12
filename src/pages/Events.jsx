@@ -1,6 +1,6 @@
 // src/pages/Events.jsx
 import { useState, useEffect, useRef } from "react";
-import { X, ArrowLeft, ArrowRight, Play, Images, CalendarBlank } from "@phosphor-icons/react";
+import { X, ArrowLeft, ArrowRight, Images, CalendarBlank } from "@phosphor-icons/react";
 
 // ─── REPLACE THESE with your actual image paths once you have them ───
 const annualFunctionPhotos = [
@@ -19,7 +19,7 @@ const annualFunctionPhotos = [
 ];
 
 // ─── REPLACE with actual YouTube video ID ───
-const YOUTUBE_VIDEO_ID = "YOUR_VIDEO_ID_HERE";
+
 
 // ── Animate on scroll hook ──
 function useScrollReveal(threshold = 0.15) {
@@ -171,9 +171,7 @@ function Lightbox({ photos, index, onClose, onPrev, onNext }) {
 
 export default function Events() {
   const [lightboxIndex, setLightboxIndex] = useState(null);
-  const [videoPlaying,  setVideoPlaying]  = useState(false);
   const [heroRef, heroVisible]            = useScrollReveal(0.1);
-  const [videoRef, videoVisible]          = useScrollReveal(0.2);
 
   const openLightbox  = (i) => setLightboxIndex(i);
   const closeLightbox = ()  => setLightboxIndex(null);
@@ -270,100 +268,7 @@ export default function Events() {
       </section>
 
       {/* ── VIDEO SECTION ── */}
-      <section className="max-w-4xl mx-auto px-4 pb-16">
-        <div
-          ref={videoRef}
-          className="transition-all duration-700"
-          style={{
-            opacity:   videoVisible ? 1 : 0,
-            transform: videoVisible ? "translateY(0)" : "translateY(32px)",
-          }}
-        >
-          {/* Header */}
-          <div className="flex items-center gap-3 mb-5">
-            <div className="w-10 h-10 rounded-full bg-red-900 flex items-center
-                            justify-center flex-shrink-0">
-              <Play size={16} color="white" weight="fill" />
-            </div>
-            <div>
-              <h3 className="text-red-900 font-bold text-lg">
-                Full Event Video
-              </h3>
-              <p className="text-gray-500 text-xs">
-                Annual Function 2025–26 · Sarada Vidya Mandir
-              </p>
-            </div>
-          </div>
-
-          {/* Video embed */}
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden
-                          shadow-xl border-4 border-red-900/10 bg-gray-900">
-
-            {!videoPlaying ? (
-              /* Thumbnail + play button */
-              <div
-                className="absolute inset-0 flex items-center justify-center
-                           cursor-pointer group"
-                onClick={() => setVideoPlaying(true)}
-              >
-                {/* YouTube thumbnail */}
-                <img
-                  src={`https://img.youtube.com/vi/${YOUTUBE_VIDEO_ID}/maxresdefault.jpg`}
-                  alt="Annual Function Video"
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.src = `https://img.youtube.com/vi/${YOUTUBE_VIDEO_ID}/hqdefault.jpg`;
-                  }}
-                />
-
-                {/* Dark overlay */}
-                <div className="absolute inset-0 bg-black/40
-                                group-hover:bg-black/30 transition-colors duration-300" />
-
-                {/* Play button */}
-                <div className="absolute w-20 h-20 rounded-full bg-red-900
-                                flex items-center justify-center shadow-2xl
-                                group-hover:scale-110 group-hover:bg-red-700
-                                transition-all duration-300 z-10">
-                  <Play size={32} color="white" weight="fill" className="ml-1" />
-                </div>
-
-                {/* Label */}
-                <div className="absolute bottom-4 left-4 text-white z-10">
-                  <p className="font-bold text-sm drop-shadow">
-                    Annual Function 2025–26
-                  </p>
-                  <p className="text-white/70 text-xs">
-                    Click to play
-                  </p>
-                </div>
-              </div>
-            ) : (
-              /* Actual YouTube embed — autoplay on click */
-              <iframe
-                src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&rel=0`}
-                title="Annual Function 2025-26"
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write;
-                       encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            )}
-          </div>
-
-          {/* Note if no YouTube ID yet */}
-          {YOUTUBE_VIDEO_ID === "YOUR_VIDEO_ID_HERE" && (
-            <div className="mt-3 flex items-start gap-2 text-xs text-amber-700
-                            bg-amber-50 border border-amber-200 rounded-xl px-4 py-3">
-              <span>⚠️</span>
-              <p>
-                Replace <code className="bg-amber-100 px-1 rounded">YOUR_VIDEO_ID_HERE</code> with
-                the actual YouTube video ID once the client uploads the video.
-              </p>
-            </div>
-          )}
-        </div>
-      </section>
+      
 
       {/* ── LIGHTBOX ── */}
       {lightboxIndex !== null && (

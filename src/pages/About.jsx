@@ -1,49 +1,93 @@
 // src/pages/About.jsx
-import { useState } from "react"; // ✅ ADD THIS
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Buildings, Target, Eye, BookOpenText } from "@phosphor-icons/react";
 
-
+// ── PRINCIPAL MESSAGE DATA ──
 const principalMessage = {
+  odia: {
+    label: "ପ୍ରଧାନ ଶିକ୍ଷକଙ୍କ ବାର୍ତ୍ତା",
+    subtitle: "Principal's Message",
+    message: [
+      "ପ୍ରିୟ ଛାତ୍ରଛାତ୍ରୀ, ଅଭିଭାବକ ଓ ହିତୈଷୀ ମାନଙ୍କ ପ୍ରତି,",
+      "ନୂଆ ଶିକ୍ଷାବର୍ଷ ଆରମ୍ଭ ସମୟରେ ମୁଁ ସମସ୍ତ ଛାତ୍ରଛାତ୍ରୀଙ୍କୁ ମୋ ଆଶୀର୍ବାଦ ଓ ଶୁଭେଚ୍ଛା ଜଣାଉଛି। ଆଶା କରୁଛି ଏ ବର୍ଷ ଆପଣମାନେ ନିଜ ଲକ୍ଷ୍ୟ ହାସଲ କରିବାପାଇଁ ଆହୁରି ଅଧିକ ପରିଶ୍ରମ କରିବେ।",
+      "ମାନବ ଜୀବନରେ ଶିକ୍ଷା ଅତ୍ୟନ୍ତ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ। ଏହା ଆମକୁ ମୂଲ୍ୟବୋଧ, ଜ୍ଞାନ ଓ ଶୃଙ୍ଖଳା ଶିଖାଏ। ଆମ ବିଦ୍ୟାଳୟରେ ଶିକ୍ଷାର ସହ ନୈତିକ ମୂଲ୍ୟବୋଧ, ଶୃଙ୍ଖଳା ଓ ଉତ୍ସର୍ଗ ଉପରେ ବିଶେଷ ଗୁରୁତ୍ୱ ଦିଆଯାଏ।",
+      "ଛାତ୍ରଛାତ୍ରୀମାନେ ନିଜ ଶିକ୍ଷକଙ୍କୁ ସମ୍ମାନ ଦିଅନ୍ତୁ ଓ ନିଷ୍ଠାର ସହ ନିଜ ଦାୟିତ୍ୱ ପୂର୍ଣ୍ଣ କରନ୍ତୁ। ବିଶ୍ୱାସ ଅଛି ଯେ ଆପଣ ଏହି ଅନୁଷ୍ଠାନରେ ଉତ୍ତମ ଶିକ୍ଷା ଲାଭ କରିବେ ଏବଂ ଜୀବନରେ ସଫଳ ହୋଇ ଜାତିର ଅଗ୍ରଗତିରେ ଅବଦାନ ରଖିବେ।",
+      "— ସାରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର, ଶାରଦା ବିଦ୍ୟା ମନ୍ଦିର",
+    ],
+    name: "ସାରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର",
+    designation: "ପ୍ରଧାନ ଶିକ୍ଷକ, ଶାରଦା ବିଦ୍ୟା ମନ୍ଦିର",
+  },
   english: {
     label: "Principal's Message",
     subtitle: "ପ୍ରଧାନ ଶିକ୍ଷକଙ୍କ ସନ୍ଦେଶ",
     message: [
-      "At the beginning of the new academic year, I extend my blessings and best wishes to all the students.",
-      " I hope that this year you will work harder to achieve your goals. Education is extremely important in human life. It teaches us values, knowledge, and discipline.",
-
-      "In our school, along with education, special emphasis is given to moral values, discipline, and dedication. Students should respect their teachers and fulfill their responsibilities with sincerity.",
-
-      "I believe that you will receive a good education in this institution. May you achieve success in your life and contribute to the progress of the nation.",
-
-    " Wishing you success in your future.",
-     
+      "Dear Students, Parents, and Well-wishers,",
+      "At the beginning of the new academic year, I extend my blessings and best wishes to all the students. I hope that this year you will work harder to achieve your goals.",
+      "Education is extremely important in human life. It teaches us values, knowledge, and discipline. In our school, along with education, special emphasis is given to moral values, discipline, and dedication.",
+      "Students should respect their teachers and fulfill their responsibilities with sincerity. I believe that you will receive a good education in this institution and contribute to the progress of the nation.",
       "— Sarat Chandra Mohapatra, Sarada Vidya Mandir",
     ],
     name: "Sarat Chandra Mohapatra",
     designation: "Principal, Sarada Vidya Mandir",
   },
+};
+
+// ── VISION DATA ──
+const visionData = {
   odia: {
-    label: "ପ୍ରଧାନ ଶିକ୍ଷକଙ୍କ ବାର୍ତ୍ତା",
-    subtitle: "Principal's Message",
-    message: [
-      
-      "ନୂତନ ଶିକ୍ଷାବର୍ଷର ଆରମ୍ଭରେ ମୁଁ ସମସ୍ତ ଛାତ୍ରଛାତ୍ରୀଙ୍କୁ ଆଶୀର୍ବାଦ ଓ ଶୁଭେଚ୍ଛା ଜଣାଉଛି । ",
-      "ଏହି ବର୍ଷ ଆପଣମାନେ ନିଜ ଲକ୍ଷ୍ୟ ପ୍ରାପ୍ତି ପାଇଁ ଅଧିକ ପରିଶ୍ରମ କରିବେ ବୋଲି ଆଶା କରୁଛି । ଶିକ୍ଷା ମାନବଜୀବନରେ ଅତ୍ୟନ୍ତ ଆବଶ୍ୟକ । ଏହା ଆମକୁ ନୀତି, ଜ୍ଞାନ ଓ ଶିଷ୍ଟାଚାର ଶିଖାଏ ।",
-
-      "ଆମ ବିଦ୍ୟାଳୟରେ ଶିକ୍ଷା ସହିତ ନୈତିକ ମୂଲ୍ୟବୋଧ, ଶୃଙ୍ଖଳା ଓ ନିଷ୍ଠାକୁ ବିଶେଷ ଗୁରୁତ୍ୱ ଦିଆଯାଏ । ଛାତ୍ରଛାତ୍ରୀମାନେ ନିଜ ଗୁରୁଜନଙ୍କ ପ୍ରତି ସମ୍ମାନ ଦେବା ସହିତ ନିଜ ଦାୟିତ୍ୱକୁ ନିଷ୍ଠାର ସହିତ ପାଳନ କରିବା ଉଚିତ ।",
-
-      "ଏହି ବିଦ୍ୟାଳୟରେ ଆପଣମାନେ ଭଲ ଶିକ୍ଷା ପାଇବେ ବୋଲି ମୋର ଆଶା ଅଛି । ଆପଣମାନେ ନିଜ ଜୀବନରେ ସଫଳତା ଲାଭ କରିବେ ଓ ଦେଶର ଉତ୍କର୍ଷରେ ଅବଦାନ ରଖିବେ ।",
-      "— ପ୍ରଧାନ ଶିକ୍ଷକଙ୍କ ନାମ, ଶାରଦା ବିଦ୍ୟା ମନ୍ଦିର",
+    title: "ଆମ ଦୃଷ୍ଟିଭଙ୍ଗୀ",
+    body: "ଓଡ଼ିଶାର ଏକ ଅଗ୍ରଣୀ ଶିକ୍ଷା ଅନୁଷ୍ଠାନ ହୋଇ ପ୍ରତ୍ୟେକ ଶିଶୁକୁ ଗୁଣାତ୍ମକ ଶିକ୍ଷା, ଦୃଢ଼ ନୈତିକ ମୂଲ୍ୟବୋଧ ଓ ସାଂସ୍କୃତିକ ଗୌରବ ଦ୍ୱାରା ଆତ୍ମବିଶ୍ୱାସୀ, ଦୟାଶୀଳ ଓ ସମ୍ପ୍ରଦାୟ ପ୍ରତି ଦାୟୀ ମଣିଷ ଭାବେ ଗଢ଼ିବା।",
+    points: [
+      "ପ୍ରତ୍ୟେକ ଛାତ୍ରଛାତ୍ରୀଙ୍କ ସର୍ବାଙ୍ଗୀଣ ବିକାଶ",
+      "ଓଡ଼ିଆ ସଂସ୍କୃତି ଓ ଐତିହ୍ୟ ସଂରକ୍ଷଣ",
+      "ଭବିଷ୍ୟତ ନେତୃତ୍ୱ ନିର୍ମାଣ",
     ],
-    name: "ପ୍ରଧାନ ଶିକ୍ଷକଙ୍କ ନାମ",
-    designation: "ପ୍ରଧାନ ଶିକ୍ଷକ, ଶାରଦା ବିଦ୍ୟା ମନ୍ଦିର",
+  },
+  english: {
+    title: "Our Vision",
+    body: "To be a leading institution in Odisha that nurtures every child with quality education, strong moral values and cultural pride — creating confident, compassionate and capable individuals who contribute positively to society.",
+    points: [
+      "Holistic development of every student",
+      "Preserving Odia culture & heritage",
+      "Building future-ready leaders",
+    ],
+  },
+};
+
+// ── MISSION DATA ──
+const missionData = {
+  odia: {
+    title: "ଆମ ଉଦ୍ଦେଶ୍ୟ",
+    body: "ସବୁ ପୃଷ୍ଠଭୂମିର ଛାତ୍ରଛାତ୍ରୀଙ୍କୁ ସହଜଲଭ୍ୟ, ଉଚ୍ଚ-ଗୁଣମାନ ସମ୍ପନ୍ନ ଓଡ଼ିଆ-ମାଧ୍ୟମ ଶିକ୍ଷା ଦ୍ୱାରା ଶୈକ୍ଷିକ ଉତ୍କର୍ଷ, ଶୃଙ୍ଖଳା, ସୃଜନଶୀଳତା ଓ ମୂଲ୍ୟ ଆଧାରିତ ଶିଖ୍ ଯୋଗ କରି ସଶକ୍ତ କରିବା।",
+    points: [
+      "ପ୍ରତ୍ୟେକ ଶିଶୁ ପାଇଁ ଗୁଣାତ୍ମକ ଶିକ୍ଷା",
+      "ସୁରକ୍ଷିତ ଓ ଅନ୍ତର୍ଭୁକ୍ତ ଶିକ୍ଷା ପରିବେଶ",
+      "ଅଭିଭାବକ ଓ ସମ୍ପ୍ରଦାୟ ସହ ଅଂଶୀଦାରିତ୍ୱ",
+    ],
+  },
+  english: {
+    title: "Our Mission",
+    body: "To provide accessible, high-quality Odia-medium education that empowers students from all backgrounds — combining academic excellence with discipline, creativity and values-based learning.",
+    points: [
+      "Quality education for every child",
+      "Safe, inclusive learning environment",
+      "Partnership with parents & community",
+    ],
   },
 };
 
 export default function About() {
-  const [lang, setLang] = useState("english"); // ✅ ADD THIS
-  const msg = principalMessage[lang];           // ✅ ADD THIS
+  // ✅ Odia is default for principal message
+  const [lang, setLang] = useState("odia");
+
+  // ✅ Each card has its own independent language state, Odia default
+  const [visionLang,  setVisionLang]  = useState("odia");
+  const [missionLang, setMissionLang] = useState("odia");
+
+  const msg     = principalMessage[lang];
+  const vision  = visionData[visionLang];
+  const mission = missionData[missionLang];
 
   return (
     <div className="w-full font-sans page-enter">
@@ -79,10 +123,12 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── ABOUT THE SCHOOL ── UNCHANGED */}
+      {/* ── ABOUT THE SCHOOL ── */}
       <section className="bg-white py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row items-start gap-10">
+
+            {/* Left — Logo + Info Card */}
             <div className="flex-shrink-0 flex flex-col items-center gap-4
                             bg-red-50 rounded-2xl p-8 border border-red-100
                             shadow-sm w-full md:w-72">
@@ -110,6 +156,8 @@ export default function About() {
                 <p><span className="font-semibold text-red-900">👩‍🎓 Classes:</span> I to X</p>
               </div>
             </div>
+
+            {/* Right — Description */}
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-4">
                 <Buildings size={36} weight="duotone" color="#8B0000" />
@@ -148,10 +196,10 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── DIVIDER ── UNCHANGED */}
+      {/* ── DIVIDER ── */}
       <div className="w-full h-1 bg-gradient-to-r from-transparent via-red-200 to-transparent" />
 
-      {/* ── VISION & MISSION ── UNCHANGED */}
+      {/* ── VISION & MISSION ── */}
       <section className="bg-gray-50 py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
@@ -163,30 +211,50 @@ export default function About() {
               Vision & Mission
             </h2>
             <div className="w-16 h-1 bg-yellow-400 rounded-full mx-auto mt-3" />
+            {/* ✅ Helper hint */}
+            <p className="text-gray-400 text-xs mt-3 italic">
+              Click the icon on each card to toggle language
+            </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            {/* ── VISION CARD ── */}
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100
                             hover:shadow-md hover:border-red-200 transition-all
                             duration-200 hover:-translate-y-1">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center">
+
+                {/* ✅ Clickable icon toggles vision language */}
+                <button
+                  onClick={() =>
+                    setVisionLang((l) => (l === "odia" ? "english" : "odia"))
+                  }
+                  title={visionLang === "odia" ? "Switch to English" : "Switch to Odia"}
+                  className="w-12 h-12 rounded-xl bg-red-50 flex items-center
+                             justify-center hover:bg-red-100 hover:scale-110
+                             transition-all duration-200 cursor-pointer
+                             border-2 border-transparent hover:border-red-300
+                             flex-shrink-0"
+                >
                   <Eye size={28} weight="duotone" color="#8B0000" />
+                </button>
+
+                <div>
+                  <h3 className="text-red-900 text-xl font-bold">{vision.title}</h3>
+                  {/* Language pill */}
+                  <span className="text-xs text-gray-400 font-medium">
+                    {visionLang === "odia" ? "ଓଡ଼ିଆ · Click icon for English" : "English · Click icon for Odia"}
+                  </span>
                 </div>
-                <h3 className="text-red-900 text-xl font-bold">Our Vision</h3>
               </div>
+
               <div className="w-12 h-1 bg-yellow-400 rounded-full mb-5" />
               <p className="text-gray-600 text-sm leading-relaxed">
-                To be a leading institution in Odisha that nurtures every child
-                with quality education, strong moral values and cultural pride
-                creating confident, compassionate and capable individuals who
-                contribute positively to society.
+                {vision.body}
               </p>
               <ul className="mt-4 space-y-2 text-sm text-gray-500">
-                {[
-                  "Holistic development of every student",
-                  "Preserving Odia culture & heritage",
-                  "Building future-ready leaders",
-                ].map((v) => (
+                {vision.points.map((v) => (
                   <li key={v} className="flex items-start gap-2">
                     <span className="text-yellow-500 font-bold mt-0.5">›</span>
                     {v}
@@ -194,27 +262,43 @@ export default function About() {
                 ))}
               </ul>
             </div>
+
+            {/* ── MISSION CARD ── */}
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100
                             hover:shadow-md hover:border-red-200 transition-all
                             duration-200 hover:-translate-y-1">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center">
+
+                {/* ✅ Clickable icon toggles mission language */}
+                <button
+                  onClick={() =>
+                    setMissionLang((l) => (l === "odia" ? "english" : "odia"))
+                  }
+                  title={missionLang === "odia" ? "Switch to English" : "Switch to Odia"}
+                  className="w-12 h-12 rounded-xl bg-red-50 flex items-center
+                             justify-center hover:bg-red-100 hover:scale-110
+                             transition-all duration-200 cursor-pointer
+                             border-2 border-transparent hover:border-red-300
+                             flex-shrink-0"
+                >
                   <Target size={28} weight="duotone" color="#8B0000" />
+                </button>
+
+                <div>
+                  <h3 className="text-red-900 text-xl font-bold">{mission.title}</h3>
+                  {/* Language pill */}
+                  <span className="text-xs text-gray-400 font-medium">
+                    {missionLang === "odia" ? "ଓଡ଼ିଆ · Click icon for English" : "English · Click icon for Odia"}
+                  </span>
                 </div>
-                <h3 className="text-red-900 text-xl font-bold">Our Mission</h3>
               </div>
+
               <div className="w-12 h-1 bg-yellow-400 rounded-full mb-5" />
               <p className="text-gray-600 text-sm leading-relaxed">
-                To provide accessible, high-quality Odia-medium education that
-                empowers students from all backgrounds combining academic
-                excellence with discipline, creativity and values-based learning.
+                {mission.body}
               </p>
               <ul className="mt-4 space-y-2 text-sm text-gray-500">
-                {[
-                  "Quality education for every child",
-                  "Safe, inclusive learning environment",
-                  "Partnership with parents & community",
-                ].map((m) => (
+                {mission.points.map((m) => (
                   <li key={m} className="flex items-start gap-2">
                     <span className="text-yellow-500 font-bold mt-0.5">›</span>
                     {m}
@@ -222,14 +306,15 @@ export default function About() {
                 ))}
               </ul>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* ── DIVIDER ── UNCHANGED */}
+      {/* ── DIVIDER ── */}
       <div className="w-full h-1 bg-gradient-to-r from-transparent via-red-200 to-transparent" />
 
-      {/* ── PRINCIPAL'S MESSAGE ── ✅ FULLY REPLACED */}
+      {/* ── PRINCIPAL'S MESSAGE ── */}
       <section className="bg-white py-16 px-6">
         <div className="max-w-5xl mx-auto">
 
@@ -244,18 +329,8 @@ export default function About() {
             </h2>
             <div className="w-16 h-1 bg-yellow-400 rounded-full mx-auto mt-3 mb-5" />
 
-            {/* Language Toggle */}
+            {/* ✅ Toggle — Odia is left (active by default) */}
             <div className="inline-flex rounded-full border-2 border-red-900 overflow-hidden">
-              <button
-                onClick={() => setLang("english")}
-                className={`px-6 py-2 text-sm font-bold transition-all duration-200 ${
-                  lang === "english"
-                    ? "bg-red-900 text-white"
-                    : "bg-white text-red-900 hover:bg-red-50"
-                }`}
-              >
-                English
-              </button>
               <button
                 onClick={() => setLang("odia")}
                 className={`px-6 py-2 text-sm font-bold transition-all duration-200 ${
@@ -265,6 +340,16 @@ export default function About() {
                 }`}
               >
                 ଓଡ଼ିଆ
+              </button>
+              <button
+                onClick={() => setLang("english")}
+                className={`px-6 py-2 text-sm font-bold transition-all duration-200 ${
+                  lang === "english"
+                    ? "bg-red-900 text-white"
+                    : "bg-white text-red-900 hover:bg-red-50"
+                }`}
+              >
+                English
               </button>
             </div>
           </div>
@@ -302,9 +387,9 @@ export default function About() {
               <div className="flex items-center gap-3 mb-4">
                 <BookOpenText size={28} weight="duotone" color="#8B0000" />
                 <h3 className="text-red-900 font-bold text-xl">
-                  {lang === "english"
-                    ? "A Word from Our Principal"
-                    : "ପ୍ରଧାନ ଶିକ୍ଷକଙ୍କ ଅଭିମତ"}
+                  {lang === "odia"
+                    ? "ପ୍ରଧାନ ଶିକ୍ଷକଙ୍କ ଅଭିମତ"
+                    : "A Word from Our Principal"}
                 </h3>
               </div>
 

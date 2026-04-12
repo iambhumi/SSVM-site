@@ -6,29 +6,25 @@ import "./Navbar.css";
 const navItems = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
-  {
-    label: "Academics / Scholastic",
-    dropdown: [
-      { label: "State Board – Curriculum", path: "/curriculum" },
-    ],
-  },
+  // {
+  //   label: "Academics / Scholastic",
+  //   dropdown: [
+  //     { label: "State Board – Curriculum", path: "/curriculum" },
+  //   ],
+  // },
   {
     label: "Achievements",
     dropdown: [
-      { label: "Students' Achievements", path: "/student-achievements" },
-      { label: "School's Achievements",  path: "/school-achievements"  },
+      { label: "Students Achievements", path: "/student-achievements" },
+      
     ],
   },
   { label: "Facility",       path: "/facility" },
   { label: "Faculty",        path: "/faculty"  },
-  { label: "Student Alumni", path: "/alumni"   },
+  // { label: "Student Alumni", path: "/alumni"   },
   {
-    label: "Media / Bulletin Board",
-    dropdown: [
-      { label: "Events",        path: "/events"        },
-      { label: "Notices",       path: "/notices"       },
-      { label: "Announcements", path: "/announcements" },
-    ],
+    label: "Media / Bulletin Board", path:"/events",
+    
   },
   { label: "Contact Us", path: "/contact" },
 ];

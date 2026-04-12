@@ -10,7 +10,7 @@ const teachingStaff = [
   { id: 6,  name: "Sushanta Kumar Senapati",   qualification: "M.A, B.SC, B.Ed", level: "I – VIII", photo: "sushanta kumar senapati.jpeg" },
   { id: 7,  name: "Snehalata Mohanty",         qualification: "B.A, D.EL.ED",    level: "I – V",    photo: "Snehalata Mohanty.jpeg" },
   { id: 8,  name: "Kunjalata Senapati",        qualification: "B.A, D.EL.ED",    level: "I – VIII", photo: "Kunjalata senapti.jpeg" },
-  { id: 9,  name: "Dillip Kumar Jena",         qualification: "M.A, D.EL.ED",    level: "I – VIII", photo: "Dilip kumar jena.jpeg" },
+  { id: 9,  name: "Dillip Kumar Jena",         qualification: "M.A, D.EL.ED",    level: "I – VIII", photo: "Dillip kumar jena.jpeg" },
   { id: 10, name: "Nityananda Senapati",       qualification: "B.A, B.Ed",       level: "I – VIII", photo: "Nityananda senapati.jpeg" },
   { id: 11, name: "Sudesna Patra",             qualification: "B.A, D.EL.ED",    level: "I – V",    photo: "sudesna patra.jpeg" },
   { id: 12, name: "Pravati Bahalia",           qualification: "B.A, B.Ed",       level: "I – VIII", photo: "pravati bahalia.jpeg" },

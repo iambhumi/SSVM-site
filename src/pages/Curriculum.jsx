@@ -1,6 +1,5 @@
 
 
-
 // src/pages/Curriculum.jsx
 
 export default function Curriculum() {

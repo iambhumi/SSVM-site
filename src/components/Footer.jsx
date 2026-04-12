@@ -5,8 +5,7 @@ import { ArrowUp } from "@phosphor-icons/react";
 const quickLinks = [
   { label: "Home",                path: "/"                  },
   { label: "About the School",    path: "/about"             },
-  { label: "Vision & Mission",    path: "/vision-mission"    },
-  { label: "Principal's Message", path: "/principal-message" },
+  
   { label: "Facilities",          path: "/facilities"        },
   { label: "Faculty",             path: "/faculty"           },
 ];
@@ -14,10 +13,8 @@ const quickLinks = [
 const academicLinks = [
   { label: "State Board Curriculum", path: "/curriculum"           },
   { label: "Students' Achievements", path: "/student-achievements" },
-  { label: "School's Achievements",  path: "/school-achievements"  },
-  { label: "Student Alumni",         path: "/alumni"               },
+  
   { label: "Events",                 path: "/events"               },
-  { label: "Photo Album",            path: "/photo-album"          },
 ];
 
 export default function Footer() {
@@ -96,24 +93,8 @@ export default function Footer() {
           </Link>
             {/* Social Icons */}
             <div className="flex gap-3">
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-yellow-400
-                           hover:text-red-900 flex items-center justify-center
-                           text-sm font-bold transition-all duration-200"
-              >
-                f
-              </a>
-              <a
-                href="#"
-                aria-label="YouTube"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-yellow-400
-                           hover:text-red-900 flex items-center justify-center
-                           text-sm transition-all duration-200"
-              >
-                ▶
-              </a>
+              
+              
               <a
                 href="#"
                 aria-label="WhatsApp"
@@ -216,16 +197,10 @@ export default function Footer() {
         </div>
 
         {/* ── COPYRIGHT BAR ── */}
-        <div className="border-t border-white/10 py-5 px-6">
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center
-                          justify-between gap-2 text-xs text-gray-500">
-            <p>© 2026 Sarada Vidya Mandir, Bhadrak. All Rights Reserved.</p>
-            <p>
-              Designed & Developed by{" "}
-              <span className="text-yellow-400 font-semibold">SwiftRise</span>
-            </p>
-          </div>
-        </div>
+        <div className="max-w-6xl mx-auto flex items-center
+                justify-center gap-2 text-xs text-gray-500">
+        <p> SwiftRise Solution Pvt. Ltd. All Rights Reserved.</p>
+</div>
 
       </footer>
     </>
