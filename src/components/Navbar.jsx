@@ -53,7 +53,8 @@ export default function Navbar() {
 
           {/* Logo — UNCHANGED */}
           <div className="navbar-brand">
-            <img src="/Logo.jpeg" alt="School Logo" className="logo" />
+            <Link to="/" onClick={closeAll}>
+            <img src="/Logo.jpeg" alt="School Logo" className="logo" /></Link>
             <div className="school-name">
               <span className="name-odia">ଶାରଦା ବିଦ୍ୟା ମନ୍ଦିର</span>
               <span className="name-english">Sarada Vidya Mandir</span>

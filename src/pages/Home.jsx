@@ -42,12 +42,50 @@ const quickLinks = [
   { label: "Contact Us",  path: "/contact",     Icon: Phone,             desc: "Get in touch with us"       },
 ];
 
+// ── REPLACE features array at top of file ──
 const features = [
-  { Icon: Books,           title: "Quality Education",      desc: "State Board curriculum enriched with NCERT books, AI & Robotics from early grades."   },
-  { Icon: Trophy,          title: "Award-Winning Students", desc: "Consistent top performers in NMMS, NTSE and district-level competitions."              },
-  { Icon: CalendarDots,    title: "Cultural Activities",    desc: "Annual cultural fests, sports meets, debates and art exhibitions."                      },
-  { Icon: Leaf,            title: "Value-Based Learning",   desc: "Grounded in Indian values and Odia culture with modern educational practices."          },
-  { Icon: Handshake,       title: "Parent Engagement",      desc: "Regular PTMs, notices and open communication between school and parents."               },
+  {
+    Icon: Books,
+    odiaTitle: "ଗୁଣାତ୍ମକ ଶିକ୍ଷା",
+    odiaDesc:  "NCERT ପୁସ୍ତକ ଓ ଆଧୁନିକ ଶିକ୍ଷା ପଦ୍ଧତି ସହ ରାଜ୍ୟ ବୋର୍ଡ ପାଠ୍ୟକ୍ରମ।",
+    engTitle:  "Quality Education",
+    engDesc:   "State Board curriculum enriched with NCERT books and modern teaching methods.",
+  },
+  {
+    Icon: Trophy,
+    odiaTitle: "ପୁରସ୍କୃତ ଛାତ୍ରଛାତ୍ରୀ",
+    odiaDesc:  "NMMS, NTSE ଓ ଜିଲ୍ଲାସ୍ତରୀୟ ପ୍ରତିଯୋଗିତାରେ ସ୍ଥିର ଶ୍ରେଷ୍ଠ ପ୍ରଦର୍ଶନ।",
+    engTitle:  "Award-Winning Students",
+    engDesc:   "Consistent top performers in NMMS, NTSE and district-level competitions.",
+  },
+  {
+    Icon: CalendarDots,
+    odiaTitle: "ସାଂସ୍କୃତିକ ଅନୁଷ୍ଠାନ",
+    odiaDesc:  "ବାର୍ଷିକ ଉତ୍ସବ, କ୍ରୀଡ଼ା ଉତ୍ସବ, ବାଦ-ବିବାଦ ଓ ଚିତ୍ର ପ୍ରଦର୍ଶନୀ।",
+    engTitle:  "Cultural Activities",
+    engDesc:   "Annual cultural fests, sports meets, debates and art exhibitions.",
+  },
+  {
+    Icon: Leaf,
+    odiaTitle: "ମୂଲ୍ୟ ଆଧାରିତ ଶିକ୍ଷା",
+    odiaDesc:  "ଆଧୁନିକ ଶୈକ୍ଷିକ ଅଭ୍ୟାସ ସହ ଭାରତୀୟ ମୂଲ୍ୟବୋଧ ଓ ଓଡ଼ିଆ ସଂସ୍କୃତି ଉପରେ ଆଧାରିତ।",
+    engTitle:  "Value-Based Learning",
+    engDesc:   "Grounded in Indian values and Odia culture with modern educational practices.",
+  },
+  {
+    Icon: Desktop,
+    odiaTitle: "ସ୍ମାର୍ଟ ଶ୍ରେଣୀ କକ୍ଷ",
+    odiaDesc:  "ପ୍ରଯୁକ୍ତି ସଶକ୍ତ ଶ୍ରେଣୀ କକ୍ଷ ଯାହା ଶିକ୍ଷାକୁ ଅଧିକ ଆକର୍ଷଣୀୟ କରେ।",
+    engTitle:  "Smart Classrooms",
+    engDesc:   "Technology-enabled classrooms for interactive and engaging learning.",
+  },
+  {
+    Icon: Handshake,
+    odiaTitle: "ଅଭିଭାବକ ସଂଯୋଗ",
+    odiaDesc:  "ନିୟମିତ ଅଭିଭାବକ-ଶିକ୍ଷକ ସଭା ଓ ବିଦ୍ୟାଳୟ ଓ ଅଭିଭାବକ ମଧ୍ୟରେ ଖୋଲା ଯୋଗାଯୋଗ।",
+    engTitle:  "Parent Engagement",
+    engDesc:   "Regular PTMs, notices and open communication between school and parents.",
+  },
 ];
 
 const latestEvents = [
@@ -56,6 +94,45 @@ const latestEvents = [
   { date: "20 Apr", title: "Parent-Teacher Meeting", desc: "Semester 2 PTM for all classes — 9AM to 1PM."          },
 ];
 
+function FeatureCard({ feature }) {
+  const [showEng, setShowEng] = useState(false);
+  const { Icon, odiaTitle, odiaDesc, engTitle, engDesc } = feature;
+
+  return (
+    <div
+      className="bg-white rounded-xl p-6 shadow-sm border border-gray-100
+                 hover:shadow-md hover:border-red-200 transition-all
+                 duration-200 hover:-translate-y-1"
+    >
+      {/* Clicking the icon toggles language */}
+      <button
+        onClick={() => setShowEng((v) => !v)}
+        title={showEng ? "ଓଡ଼ିଆ ଦେଖନ୍ତୁ" : "See in English"}
+        className="focus:outline-none group"
+        aria-label="Toggle language"
+      >
+        <Icon
+          size={40}
+          weight="duotone"
+          color="#8B0000"
+          className="group-hover:scale-110 transition-transform duration-200"
+        />
+      </button>
+
+      <h4 className="text-red-900 font-bold mt-4 mb-2 text-base">
+        {showEng ? engTitle : odiaTitle}
+      </h4>
+      <p className="text-gray-500 text-sm leading-relaxed">
+        {showEng ? engDesc : odiaDesc}
+      </p>
+
+      {/* Hint pill */}
+      <p className="text-gray-300 text-xs mt-3 italic">
+        {showEng ? "← ଓଡ଼ିଆ" : "English →"} (click icon)
+      </p>
+    </div>
+  );
+}
 export default function Home() {
   const [current, setCurrent] = useState(0);
 
@@ -307,32 +384,26 @@ export default function Home() {
 </section>
 
       {/* ── WHY CHOOSE US ── */}
-      <section className="bg-gray-50 py-16 px-6">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-center text-red-900 text-3xl font-bold mb-2">
-            Why Choose Us
-          </h2>
-          <p className="text-center text-gray-500 text-sm mb-10">
-            Building tomorrow's leaders with values rooted in Odisha's culture
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {features.map((f) => (
-              <div
-                key={f.title}
-                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100
-                           hover:shadow-md hover:border-red-200 transition-all
-                           duration-200 hover:-translate-y-1"
-              >
-                <f.Icon size={40} weight="duotone" color="#8B0000" />
-                <h4 className="text-red-900 font-bold mt-4 mb-2 text-base">
-                  {f.title}
-                </h4>
-                <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
+      {/* ── WHY CHOOSE US ── */}
+<section className="bg-gray-50 py-16 px-6">
+  <div className="max-w-5xl mx-auto">
+    <h2 className="text-center text-red-900 text-3xl font-bold mb-2">
+      ଆମକୁ କାହିଁ ବାଛିବେ
+    </h2>
+    <p className="text-center text-gray-500 text-sm mb-2">
+      Why Choose Us
+    </p>
+    <p className="text-center text-gray-400 text-xs mb-10 italic">
+      (ଆଇକନ୍ ଉପରେ କ୍ଲିକ୍ କଲେ ଇଂରାଜୀ ଦେଖିବେ)
+    </p>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {features.map((f) => (
+        <FeatureCard key={f.odiaTitle} feature={f} />
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* ── EVENTS ── */}
       <section className="bg-red-900 py-16 px-6">

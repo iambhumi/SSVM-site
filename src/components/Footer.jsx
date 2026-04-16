@@ -172,35 +172,39 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <span className="text-yellow-400">📞</span>
                 <a
-                  href="tel:+91XXXXXXXXXX"
+                  href="tel:8895713070, 9556740283, 7847955317"
                   className="hover:text-yellow-400 transition-colors duration-200"
                 >
-                  +91 XXXXX XXXXX
+                  +91 8895713070, +91 9556740283, +91 7847955317
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <span className="text-yellow-400">✉️</span>
                 <a
-                  href="mailto:info@saradavidyamandir.in"
+                  href="saradavidyamandir@gmail.com"
                   className="hover:text-yellow-400 transition-colors duration-200
                              break-all text-xs"
                 >
-                  info@saradavidyamandir.in
+                  saradavidyamandir@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <span className="text-yellow-400">⏰</span>
-                <span>Mon – Sat: 8:00 AM – 2:00 PM</span>
+                <span>Mon – Sat: 10:00 AM – 4:00 PM</span>
               </li>
             </ul>
           </div>
         </div>
 
         {/* ── COPYRIGHT BAR ── */}
-        <div className="max-w-6xl mx-auto flex items-center
-                justify-center gap-2 text-xs text-gray-500">
-        <p> SwiftRise Solution Pvt. Ltd. All Rights Reserved.</p>
-</div>
+        
+<p className="text-gray-400 text-xs mt-1 text-center">
+  © {new Date().getFullYear()} All rights reserved by{" "}
+  <a href="https://swiftrise.in" target="_blank" rel="noopener noreferrer"
+     className="text-yellow-400 hover:text-yellow-300 underline underline-offset-2 transition-colors duration-150">
+    SwiftRise
+  </a>
+</p>
 
       </footer>
     </>

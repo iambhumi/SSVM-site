@@ -10,16 +10,16 @@ const contactCards = [
   {
     Icon:  Phone,
     label: "Phone",
-    value: "+91 XXXXX XXXXX",
-    sub:   "Mon – Sat, 8AM to 2PM",
-    href:  "tel:+91XXXXXXXXXX",
+    value: " +91 8895713070, +91 9556740283, +91 784795531",
+    sub:   "Mon – Sat, 10AM to 4PM",
+    href:  "tel :  +91 8895713070, +91 9556740283, +91 7847955317",
   },
   {
     Icon:  Envelope,
     label: "Email",
-    value: "info@saradavidyamandir.in",
+    value: "saradavidyamandir@gmail.com",
     sub:   "We reply within 24 hours",
-    href:  "mailto:info@saradavidyamandir.in",
+    href:  "mailto:saradavidyamandir@gmail.com",
   },
   {
     Icon:  MapPin,
@@ -171,13 +171,13 @@ export default function Contact() {
                   <Phone size={20} weight="fill" color="#facc15" />
                 </div>
                 <div>
-                  <p className="text-red-900 font-bold text-sm">Phone / WhatsApp</p>
+                  <p className="text-red-900 font-bold text-sm">Phone </p>
                   <a
-                    href="tel:+91XXXXXXXXXX"
+                    href="tel: +91 8895713070, +91 9556740283, +91 7847955317"
                     className="text-gray-600 text-sm hover:text-red-800
                                transition-colors mt-0.5 block"
                   >
-                    +91 XXXXX XXXXX
+                     +91 8895713070, +91 9556740283, +91 7847955317
                   </a>
                 </div>
               </div>
@@ -205,48 +205,10 @@ export default function Contact() {
             <div>
               <p className="text-gray-400 text-xs uppercase tracking-widest
                             font-semibold mb-3">
-                Follow Us
+              
               </p>
               <div className="flex gap-3">
-                <a
-                  href="#"
-                  aria-label="Facebook"
-                  className="w-10 h-10 rounded-xl bg-red-900 hover:bg-yellow-400
-                             flex items-center justify-center
-                             transition-all duration-200 group"
-                >
-                  <FacebookLogo
-                    size={20}
-                    weight="fill"
-                    className="text-yellow-400 group-hover:text-red-900"
-                  />
-                </a>
-                <a
-                  href="#"
-                  aria-label="YouTube"
-                  className="w-10 h-10 rounded-xl bg-red-900 hover:bg-yellow-400
-                             flex items-center justify-center
-                             transition-all duration-200 group"
-                >
-                  <YoutubeLogo
-                    size={20}
-                    weight="fill"
-                    className="text-yellow-400 group-hover:text-red-900"
-                  />
-                </a>
-                <a
-                  href="#"
-                  aria-label="WhatsApp"
-                  className="w-10 h-10 rounded-xl bg-red-900 hover:bg-yellow-400
-                             flex items-center justify-center
-                             transition-all duration-200 group"
-                >
-                  <WhatsappLogo
-                    size={20}
-                    weight="fill"
-                    className="text-yellow-400 group-hover:text-red-900"
-                  />
-                </a>
+
               </div>
             </div>
           </div>

@@ -22,7 +22,7 @@ const facilities = [
   {
     title: "Playground",
     icon: "⚽",
-    image: "/playground.jpg",
+    image: "/Play1.jpeg",
     desc: "A spacious playground for physical activities, sports and outdoor games that promote health and teamwork.",
   },
   
