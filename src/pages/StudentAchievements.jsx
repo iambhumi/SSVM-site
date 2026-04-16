@@ -30,12 +30,7 @@ const years = [
   },
 ];
 
-const milestones = [
-  { Icon: Trophy, value: "3+",    label: "Years of Excellence"        },
-  { Icon: Medal,  value: "98%",   label: "Best Pass Rate"             },
-  { Icon: Star,   value: "50+",   label: "Matric Toppers Featured"    },
-  { Icon: Medal,  value: "100%",  label: "Class 5 Scholarship Result" },
-];
+
 
 export default function StudentAchievements() {
   const [active, setActive] = useState(0);
@@ -76,22 +71,7 @@ export default function StudentAchievements() {
       </section>
 
       {/* ── STATS STRIP ── */}
-      <section className="bg-yellow-400 py-8 px-4">
-        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          {milestones.map((m) => (
-            <div
-              key={m.label}
-              className="flex flex-col items-center gap-1
-                         hover:scale-105 transition-transform duration-200"
-            >
-              <m.Icon size={34} weight="duotone" color="#7f1d1d" />
-              <p className="text-red-900 text-2xl font-extrabold">{m.value}</p>
-              <p className="text-red-800 text-xs font-medium">{m.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      
       {/* ── YEAR TABS + BANNER ── */}
       <section className="bg-gray-50 py-14 px-4">
         <div className="max-w-4xl mx-auto">

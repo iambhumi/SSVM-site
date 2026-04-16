@@ -91,9 +91,7 @@ export default function Footer() {
               <p className="text-gray-500 text-xs mt-2">Bhadrak, Odisha</p>
             </div>
           </Link>
-            {/* Social Icons */}
-            <div className="flex gap-3">
-            </div>
+            
           </div>
 
           {/* Col 2 — Quick Links */}
