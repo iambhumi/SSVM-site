@@ -160,23 +160,15 @@ export default function StudentAchievements() {
           parents and teachers working together as one family.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
+          
           <Link
-            to="/school-achievements"
-            className="inline-flex items-center gap-2 bg-red-900 text-yellow-400
-                       font-semibold py-2 px-6 rounded-full hover:bg-red-800
-                       transition-all duration-200"
-          >
-            View School Achievements
-            <ArrowRight size={16} weight="bold" />
-          </Link>
-          <Link
-            to="/photo-album"
+            to="/events"
             className="inline-flex items-center gap-2 border-2 border-red-900
                        text-red-900 font-semibold py-2 px-6 rounded-full
                        hover:bg-red-900 hover:text-yellow-400
                        transition-all duration-200"
           >
-            Photo Album
+            Media
             <ArrowRight size={16} weight="bold" />
           </Link>
         </div>
