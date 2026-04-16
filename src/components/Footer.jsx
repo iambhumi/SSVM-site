@@ -102,7 +102,7 @@ export default function Footer() {
                            hover:text-red-900 flex items-center justify-center
                            text-sm transition-all duration-200"
               >
-                💬
+                
               </a>
             </div>
           </div>
