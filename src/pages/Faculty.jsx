@@ -2,14 +2,15 @@
 import { useState } from "react";
 
 const teachingStaff = [
-  { id: 1,  name: "Sarat Chandra Mohapatra",  qualification: "M.A, B.Ed",       level: "I – VIII", photo: "SaratChandraMohapatraPrincipal.jpeg" },
-  { id: 2,  name: "Nirmal Kumar Senapati",     qualification: "I.A",              level: "I – V",    photo: "Nirmal kumar senapati.jpeg" },
-  { id: 3,  name: "Susmita Swain",             qualification: "M.A, B.Ed",       level: "I – VIII", photo: "Sumita swain.jpeg" },
+  {id: 0, name:  "Chakradhara Pradhan",        qualification: "President", photo: "Praasident ,Chakradhara pradhan.jpeg"},
+  { id: 1,  name: "Sarat Chandra Mohapatra",  qualification: " Principal, M.A, B.Ed",        level: "I – VIII", photo: "SaratChandraMohapatraPrincipal.jpeg" },
+  { id: 2,  name: "Nirmal Kumar Senapati",     qualification: "I.A",             level: "I – V",    photo: "Nirmal kumar senapati.jpeg" },
+  { id: 3,  name: "Susmita Swain",             qualification: "M.A, B.Ed",       level: "I – VIII", photo: "Susmita swain.jpeg" },
   { id: 4,  name: "Sujata Padhi",              qualification: "B.A, D.EL.ED",    level: "I – V",    photo: "Sujata padhi.jpeg" },
   { id: 5,  name: "Ajaya Kumar Rout",          qualification: "B.A, D.EL.ED",    level: "I – VIII", photo: "Ajaya kumar rout.jpeg" },
   { id: 6,  name: "Sushanta Kumar Senapati",   qualification: "M.A, B.SC, B.Ed", level: "I – VIII", photo: "sushanta kumar senapati.jpeg" },
   { id: 7,  name: "Snehalata Mohanty",         qualification: "B.A, D.EL.ED",    level: "I – V",    photo: "Snehalata Mohanty.jpeg" },
-  { id: 8,  name: "Kunjalata Senapati",        qualification: "B.A, D.EL.ED",    level: "I – VIII", photo: "Kunjalata senapti.jpeg" },
+  { id: 8,  name: "Kunjalata Senapati",        qualification: "B.A, D.EL.ED",    level: "I – VIII", photo: "Kunjalata senapati.jpeg" },
   { id: 9,  name: "Dillip Kumar Jena",         qualification: "M.A, D.EL.ED",    level: "I – VIII", photo: "Dillip kumar jena.jpeg" },
   { id: 10, name: "Nityananda Senapati",       qualification: "B.A, B.Ed",       level: "I – VIII", photo: "Nityananda senapati.jpeg" },
   { id: 11, name: "Sudesna Patra",             qualification: "B.A, D.EL.ED",    level: "I – V",    photo: "sudesna patra.jpeg" },
@@ -20,7 +21,7 @@ const teachingStaff = [
   { id: 16, name: "Arpita Nayak",              qualification: "B.SC",            level: "I – V",    photo: "Arpita nayak.jpeg" },
   { id: 17, name: "Prajnaparamita Barik",      qualification: "B.A, B.Ed",       level: "I – VIII", photo: "Prajnaparamita barik.jpeg"},
   { id: 18, name: "Nimai Charan Behera",       qualification: "B.SC, B.Ed",      level: "I – V",    photo: "Nimai charan behera.jpeg" },
-  { id: 19, name: "Labanyabati Sahoo",         qualification: "B.A",             level: "I – V",    photo: "Labnyabati sahoo.jpeg" },
+  { id: 19, name: "Labanyabati Sahoo",         qualification: "B.A",             level: "I – V",    photo: "Labanyabati sahoo.jpeg" },
   { id: 20, name: "Prakash Chandra Sahoo",     qualification: "B.A, B.Ed",       level: "I – VIII", photo: "Prakash chandra sahoo.jpeg" },
   { id: 21, name: "Rinarani Panda",            qualification: "I.A",             level: "I – V",    photo: "Rinarani panda.jpeg" },
   { id: 22, name: "Rasmita Behera",            qualification: "I.A",             level: "I – V",    photo: "Rasmita behera.jpeg" },
@@ -30,9 +31,9 @@ const teachingStaff = [
   { id: 26, name: "Diptimayee Jena",           qualification: "B.SC",            level: "I – V",    photo: "Diptimayee jena.jpeg" },
   { id: 27, name: "Sikha Rout",                qualification: "B.A",             level: "I – V",    photo: "sikha rout.jpeg"},
   { id: 28, name: "Biswaprava Palei",          qualification: "B.A, B.Ed",       level: "I – VIII", photo: "Biswaprava Palei.jpeg" },
-  { id: 29, name: "Satyalipika Sahoo",         qualification: "B.SC, B.Ed",      level: "I – VIII", photo: "" },
-  { id: 30, name: "Pratimalata Jena",          qualification: "B.SC",            level: "I – V",    photo: "" },
-  { id: 31, name: "Banya Panda",               qualification: "B.A, B.Ed",       level: "I – VIII", photo: "" },
+  { id: 29, name: "Satyalipika Sahoo",         qualification: "B.SC, B.Ed",      level: "I – VIII", photo: "satyalipika sahoo.jpeg" },
+  { id: 30, name: "Pratimalata Jena",          qualification: "B.SC",            level: "I – V",    photo: "Pratimalata jena.jpeg" },
+  { id: 31, name: "Banya Panda",               qualification: "B.A, B.Ed",       level: "I – VIII", photo: "Banya panda.jpeg" },
 ];
 
 const nonTeachingStaff = [
@@ -229,24 +230,7 @@ export default function Faculty() {
         </div>
       </section>
 
-      {/* ── PHOTO NOTE BANNER ── */}
-      <section className="bg-yellow-50 border-t border-b border-yellow-200 py-6 px-6">
-        <div className="max-w-3xl mx-auto flex items-start gap-3 text-sm text-yellow-800">
-          <span className="text-xl">📸</span>
-          <p>
-            <strong>Note:</strong> Faculty photos will appear automatically once
-            images are added to the{" "}
-            <code className="bg-yellow-100 px-1 rounded text-xs">
-              /public/faculty/
-            </code>{" "}
-            folder. Name each file exactly as:{" "}
-            <code className="bg-yellow-100 px-1 rounded text-xs">
-              sarat-chandra-mohapatra.jpg
-            </code>{" "}
-            (lowercase, hyphenated). Until then, initials avatars are shown.
-          </p>
-        </div>
-      </section>
+    
 
     </main>
   );

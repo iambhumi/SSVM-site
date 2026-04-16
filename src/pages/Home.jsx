@@ -21,9 +21,8 @@ import {
 const slides = [
   { image: "/School1.jpeg", caption: "Welcome to Sarada Vidya Mandir",   sub: "Nurturing Minds, Building Futures"                    },
   { image: "/School2.jpeg", caption: "Excellence in Education",           sub: "Quality Odia-medium learning since 1995"              },
-  { image: "/School3.jpg", caption: "Celebrating Culture & Talent",      sub: "Annual fests, arts and co-curricular activities"      },
-  { image: "/School4.jpg", caption: "Sports & Fitness",                  sub: "Holistic development beyond the classroom"            },
-  { image: "/School5.jpg", caption: "Values & Discipline",               sub: "Rooted in Indian tradition and Odia heritage"         },
+  { image: "/events/events3.jpeg", caption: "Celebrating Culture & Talent",      sub: "Annual fests, arts and co-curricular activities"      },
+  { image: "/Play1.jpeg", caption: "Sports & Fitness",                  sub: "Holistic development beyond the classroom"            },
 ];
 
 const notices = [
@@ -34,16 +33,11 @@ const notices = [
   "Art & Culture Fest on 10th April 2026",
 ];
 
-const stats = [
-  { label: "Years of Excellence", value: "30+",   Icon: Scales           },
-  { label: "Students Enrolled",   value: "1200+", Icon: Student          },
-  { label: "Qualified Faculty",   value: "45+",   Icon: ChalkboardTeacher },
-  { label: "Alumni Across India", value: "5000+", Icon: Globe            },
-];
+
 
 const quickLinks = [
-  { label: "Notices",     path: "/notices",     Icon: Notepad,           desc: "Latest circulars & updates" },
-  { label: "Photo Album", path: "/photo-album", Icon: Images,            desc: "Events & moments gallery"   },
+  
+  { label: "Photo Album", path: "/events", Icon: Images,            desc: "Events & moments gallery"   },
   { label: "Faculty",     path: "/faculty",     Icon: ChalkboardTeacher, desc: "Meet our teachers"          },
   { label: "Contact Us",  path: "/contact",     Icon: Phone,             desc: "Get in touch with us"       },
 ];
@@ -53,7 +47,6 @@ const features = [
   { Icon: Trophy,          title: "Award-Winning Students", desc: "Consistent top performers in NMMS, NTSE and district-level competitions."              },
   { Icon: CalendarDots,    title: "Cultural Activities",    desc: "Annual cultural fests, sports meets, debates and art exhibitions."                      },
   { Icon: Leaf,            title: "Value-Based Learning",   desc: "Grounded in Indian values and Odia culture with modern educational practices."          },
-  { Icon: Desktop,         title: "Smart Classrooms",       desc: "Technology-enabled classrooms for interactive and engaging learning."                   },
   { Icon: Handshake,       title: "Parent Engagement",      desc: "Regular PTMs, notices and open communication between school and parents."               },
 ];
 
@@ -191,26 +184,127 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ── STATS ── */}
-      <section className="bg-yellow-400 py-10 px-4">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4
-                        gap-6 text-center">
-          {stats.map((s) => (
-            <div
-              key={s.label}
-              className="flex flex-col items-center gap-2 hover:scale-105
-                         transition-transform duration-200"
-            >
-              <s.Icon size={40} weight="duotone" color="#7f1d1d" />
-              <p className="text-red-900 text-3xl font-extrabold">{s.value}</p>
-              <p className="text-red-800 text-sm font-medium">{s.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* ── LEADERSHIP MESSAGE SECTION ── */}
+<section className="bg-white py-16 px-6">
+  <div className="max-w-5xl mx-auto">
 
-      {/* ── PRINCIPAL ── */}
-      
+    {/* Heading */}
+    <div className="text-center mb-12">
+      <p className="text-yellow-600 font-semibold tracking-widest uppercase text-xs mb-2">
+        ନେତୃତ୍ୱ
+      </p>
+      <h2 className="text-red-900 text-3xl font-bold">From Our Leadership</h2>
+      <div className="w-16 h-1 bg-yellow-400 rounded-full mx-auto mt-3" />
+    </div>
+
+    {/* Two cards side by side */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      {/* ── President Card ── */}
+      <div className="bg-red-50 rounded-2xl p-7 border border-red-100 shadow-sm
+                      hover:shadow-md transition-all duration-200 flex flex-col gap-5">
+        {/* Photo + Name */}
+        <div className="flex items-center gap-4">
+          <div className="w-20 h-20 rounded-full overflow-hidden border-4
+                          border-red-900 shadow-md flex-shrink-0">
+            <img
+              src="/faculty/Praasident ,Chakradhara pradhan.jpeg" 
+              alt="Chakudhara Pradhan"
+              className="w-full h-full object-cover object-top"
+            />
+          </div>
+          <div>
+            <p className="text-xs text-yellow-700 font-bold uppercase tracking-widest mb-1">
+              ସଭାପତି
+            </p>
+            <h3 className="text-red-900 font-bold text-base leading-tight">
+              ଚକୁଧର ପ୍ରଧାନ
+            </h3>
+            <p className="text-gray-500 text-xs mt-0.5">
+              Chakudhara Pradhan
+            </p>
+            <p className="text-gray-400 text-xs">
+              President, Managing Committee
+            </p>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="w-full h-px bg-gradient-to-r from-yellow-400 via-red-200 to-transparent" />
+
+        {/* Message heading */}
+        <p className="text-red-800 font-bold text-sm tracking-wide">
+          ସଭାପତିଙ୍କ କଲମରୁ
+        </p>
+
+        {/* Message excerpt */}
+        <p className="text-gray-600 text-sm leading-relaxed">
+          <b>ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର; ଶିକ୍ଷା କ୍ଷେତ୍ରରେ ଏକ ପରିବର୍ତ୍ତନର ସୁର। ଆଦର୍ଶ ଓ ନୈତିକ
+          ଶିକ୍ଷାର ମନ୍ଦିର, ଏ ଅନୁଷ୍ଠାନ। ଏହାର ଗୁରୁମା, ଗୁରୁଜୀମାନେ ଡାଲିମପ୍ରାପ୍ତ,
+          ଛାତ୍ରବତ୍ସଳ, ସମାୟାନୁବର୍ତ୍ତୀ ତଥା ଶିକ୍ଷାମନଷ୍କ।</b>
+        </p>
+
+        {/* Signature */}
+        <div className="mt-auto pt-3 border-t border-red-100">
+          <p className="text-red-900 font-bold text-sm">ଚକୁଧର ପ୍ରଧାନ</p>
+          <p className="text-gray-400 text-xs"><b>ସଭାପତି, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର ପରିଚାଳନା କମିଟି</b></p>
+        </div>
+      </div>
+
+      {/* ── Principal Card ── */}
+      <div className="bg-red-50 rounded-2xl p-7 border border-red-100 shadow-sm
+                      hover:shadow-md transition-all duration-200 flex flex-col gap-5">
+        {/* Photo + Name */}
+        <div className="flex items-center gap-4">
+          <div className="w-20 h-20 rounded-full overflow-hidden border-4
+                          border-red-900 shadow-md flex-shrink-0">
+            <img
+              src="/faculty/SaratChandraMohapatraPrincipal.jpeg"
+              alt="Sarat Chandra Mahapatra"
+              className="w-full h-full object-cover object-top"
+            />
+          </div>
+          <div>
+            <p className="text-xs text-yellow-700 font-bold uppercase tracking-widest mb-1">
+              ପ୍ରଧାନ ଗୁରୁଜୀ
+            </p>
+            <h3 className="text-red-900 font-bold text-base leading-tight">
+              ଶାରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର
+            </h3>
+            <p className="text-gray-500 text-xs mt-0.5">
+              Sarat Chandra Mahapatra
+            </p>
+            <p className="text-gray-400 text-xs">
+              Head Teacher, Sarada Vidya Mandir
+            </p>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="w-full h-px bg-gradient-to-r from-yellow-400 via-red-200 to-transparent" />
+
+        {/* Message heading */}
+        <p className="text-red-800 font-bold text-sm tracking-wide">
+          ମୋ ପିଲାମାନଙ୍କୁ ପଦେ
+        </p>
+
+        {/* Message excerpt */}
+        <p className="text-gray-600 text-sm leading-relaxed">
+          <b>ଶାରଦା ବିଦ୍ୟାମନ୍ଦିରର ପରିସରକୁ ସ୍ୱାଗତ। ଏହା ତୁମ ଘରଠୁ ଦୂର ଆଉ ଏକ ଘର।
+          ତୁମ ଗୁରୁମା ଓ ଗୁରୁଜୀ ବାପା ମା'ଙ୍କର ବିକଳ୍ପ। ଏହି ପରିସରରେ ସୁଶୃଙ୍ଖଳତା
+          ରକ୍ଷା କରିବା ତୁମର ପ୍ରଥମ ଓ ପ୍ରଧାନ କର୍ତ୍ତବ୍ୟ।</b>
+        </p>
+
+        {/* Signature */}
+        <div className="mt-auto pt-3 border-t border-red-100">
+          <p className="text-red-900 font-bold text-sm">ଶାରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର</p>
+          <p className="text-gray-400 text-xs"><b>ପ୍ରଧାନ ଗୁରୁଜୀ, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର</b></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* ── WHY CHOOSE US ── */}
       <section className="bg-gray-50 py-16 px-6">
@@ -288,7 +382,7 @@ export default function Home() {
         <p className="text-center text-gray-500 text-sm mb-10">
           Everything you need, just one click away
         </p>
-        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
           {quickLinks.map((ql) => (
             <Link
               key={ql.label}
