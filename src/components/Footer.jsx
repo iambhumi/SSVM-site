@@ -93,17 +93,6 @@ export default function Footer() {
           </Link>
             {/* Social Icons */}
             <div className="flex gap-3">
-              
-              
-              <a
-                href="#"
-                aria-label="WhatsApp"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-yellow-400
-                           hover:text-red-900 flex items-center justify-center
-                           text-sm transition-all duration-200"
-              >
-                
-              </a>
             </div>
           </div>
 
