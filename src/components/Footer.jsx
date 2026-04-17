@@ -11,7 +11,6 @@ const quickLinks = [
 ];
 
 const academicLinks = [
-  { label: "State Board Curriculum", path: "/curriculum"           },
   { label: "Students' Achievements", path: "/student-achievements" },
   
   { label: "Events",                 path: "/events"               },
