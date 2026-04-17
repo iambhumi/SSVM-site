@@ -37,10 +37,10 @@ const teachingStaff = [
 ];
 
 const nonTeachingStaff = [
-  { id: 1, name: "Malati Lata Barik",   role: "Non-Teaching Staff", photo: null },
-  { id: 2, name: "Susanta Kumar Panda", role: "Non-Teaching Staff", photo: null },
-  { id: 3, name: "Basanta Jena",        role: "Non-Teaching Staff", photo: null },
-  { id: 4, name: "Mamakalpita Rout",    role: "Non-Teaching Staff", photo: null },
+  { id: 1, name: "Malati Lata Barik",   role: "Non-Teaching Staff", photo: "MalatiLata.jpeg" },
+  { id: 2, name: "Susanta Kumar Panda", role: "Non-Teaching Staff", photo: "" },
+  { id: 3, name: "Basanta Jena",        role: "Non-Teaching Staff", photo: "BasantaLata Jena.jpeg" },
+  { id: 4, name: "Mamakalpita Rout",    role: "Non-Teaching Staff", photo: "Mamakalpita.jpeg" },
 ];
 
 // Generates initials avatar with consistent color per name
