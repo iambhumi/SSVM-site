@@ -1,9 +1,7 @@
 // src/pages/Contact.jsx
-import { useState } from "react";
 import {
   Phone, Envelope, MapPin, Clock,
-  PaperPlaneTilt, WhatsappLogo,
-  FacebookLogo, YoutubeLogo,
+  WhatsappLogo, FacebookLogo, YoutubeLogo,
 } from "@phosphor-icons/react";
 
 const contactCards = [
@@ -28,32 +26,10 @@ const contactCards = [
     sub:   "Bhadrak, Odisha — 756120",
     href:  "https://maps.google.com",
   },
-  {
-    Icon:  Clock,
-    label: "School Hours",
-    value: "Mon – Sat",
-    sub:   "8:00 AM – 2:00 PM",
-    href:  null,
-  },
+  
 ];
 
 export default function Contact() {
-  const [form, setForm] = useState({
-    name: "", email: "", phone: "", subject: "", message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Replace with real form submission (EmailJS / Formspree)
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
-    setForm({ name: "", email: "", phone: "", subject: "", message: "" });
-  };
 
   return (
     <div className="w-full font-sans">
@@ -213,160 +189,23 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* RIGHT — Message Form */}
-          <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm">
-            <p className="text-gray-400 text-xs uppercase tracking-widest
-                          font-semibold mb-1">
-              Message Form
-            </p>
-            <h3 className="text-red-900 text-xl font-bold mb-6">
-              Send us a message
-            </h3>
-
-            {submitted && (
-              <div className="bg-green-50 border border-green-200 text-green-800
-                              rounded-xl px-4 py-3 text-sm font-semibold mb-5
-                              flex items-center gap-2">
-                ✅ Message sent! We'll get back to you shortly.
-              </div>
-            )}
-
-            <form onSubmit={handleSubmit} className="space-y-4">
-
-              {/* Name */}
-              <div>
-                <label className="text-gray-600 text-xs font-semibold uppercase
-                                  tracking-wider block mb-1">
-                  Your Name *
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  value={form.name}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter your full name"
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3
-                             text-sm text-gray-700 bg-white focus:outline-none
-                             focus:border-red-800 focus:ring-2 focus:ring-red-100
-                             transition-all duration-200 placeholder-gray-300"
-                />
-              </div>
-
-              {/* Email + Phone */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="text-gray-600 text-xs font-semibold uppercase
-                                    tracking-wider block mb-1">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    placeholder="Enter your email"
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3
-                               text-sm text-gray-700 bg-white focus:outline-none
-                               focus:border-red-800 focus:ring-2 focus:ring-red-100
-                               transition-all duration-200 placeholder-gray-300"
-                  />
-                </div>
-                <div>
-                  <label className="text-gray-600 text-xs font-semibold uppercase
-                                    tracking-wider block mb-1">
-                    Phone Number *
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={form.phone}
-                    onChange={handleChange}
-                    required
-                    placeholder="Enter your phone"
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3
-                               text-sm text-gray-700 bg-white focus:outline-none
-                               focus:border-red-800 focus:ring-2 focus:ring-red-100
-                               transition-all duration-200 placeholder-gray-300"
-                  />
-                </div>
-              </div>
-
-              {/* Subject */}
-              <div>
-                <label className="text-gray-600 text-xs font-semibold uppercase
-                                  tracking-wider block mb-1">
-                  Subject
-                </label>
-                <select
-                  name="subject"
-                  value={form.subject}
-                  onChange={handleChange}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3
-                             text-sm text-gray-700 bg-white focus:outline-none
-                             focus:border-red-800 focus:ring-2 focus:ring-red-100
-                             transition-all duration-200"
-                >
-                  <option value="">Select a subject</option>
-                  <option value="admission">Admission Enquiry</option>
-                  <option value="fees">Fee Structure</option>
-                  <option value="transport">Transport / Bus</option>
-                  <option value="events">Events & Activities</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              {/* Message */}
-              <div>
-                <label className="text-gray-600 text-xs font-semibold uppercase
-                                  tracking-wider block mb-1">
-                  Your Message *
-                </label>
-                <textarea
-                  name="message"
-                  value={form.message}
-                  onChange={handleChange}
-                  required
-                  rows={4}
-                  placeholder="Write your query or message here..."
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3
-                             text-sm text-gray-700 bg-white focus:outline-none
-                             focus:border-red-800 focus:ring-2 focus:ring-red-100
-                             transition-all duration-200 placeholder-gray-300
-                             resize-none"
-                />
-              </div>
-
-              {/* Submit */}
-              <button
-                type="submit"
-                className="w-full flex items-center justify-center gap-2
-                           bg-red-900 hover:bg-red-800 text-yellow-400 font-bold
-                           py-3 px-6 rounded-xl transition-all duration-200
-                           hover:scale-[1.02] shadow-sm hover:shadow-md"
-              >
-                <PaperPlaneTilt size={18} weight="fill" />
-                Send Message
-              </button>
-
-            </form>
+          {/* RIGHT — Map */}
+          <div className="bg-gray-50 rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+            <iframe
+              title="School Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4095.148669349596!2d86.3734249637676!3d20.96033193182618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1bf97fd0f2cf3f%3A0x96d8dd8ec929993b!2sSarada%20Vidya%20Mandir.!5e0!3m2!1sen!2sin!4v1775153473964!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </section>
 
-      {/* ── GOOGLE MAP ── */}
-      <section className="w-full h-72 bg-gray-200">
-        <iframe
-          title="School Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4095.148669349596!2d86.3734249637676!3d20.96033193182618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1bf97fd0f2cf3f%3A0x96d8dd8ec929993b!2sSarada%20Vidya%20Mandir.!5e0!3m2!1sen!2sin!4v1775153473964!5m2!1sen!2sin"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
-      </section>
+
 
     </div>
   );

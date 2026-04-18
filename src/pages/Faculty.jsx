@@ -103,14 +103,6 @@ function FacultyCard({ person, showRole = false }) {
           </p>
         )}
 
-        {person.level && (
-          <span className="inline-block mt-2 px-3 py-0.5 rounded-full
-                           bg-yellow-100 text-yellow-800 text-xs font-bold
-                           border border-yellow-300">
-            Class {person.level}
-          </span>
-        )}
-
         {showRole && (
           <p className="text-gray-500 text-xs mt-2">{person.role}</p>
         )}

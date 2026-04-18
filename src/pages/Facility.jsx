@@ -3,25 +3,22 @@
 const facilities = [
   {
     title: "Transportation",
-    icon: "🚌",
     image: "/Facilities.jpeg", // your existing photo
     desc: "We provide safe and reliable school bus and van services covering major areas of Rourkela for the daily commute of our students.",
   },
   {
     title: "Spacious Classrooms",
-    icon: "🏫",
-    image: "/classroom.jpg",
+    icon: "",
+    image: "",
     desc: "Well-ventilated, naturally lit classrooms designed to create a focused and comfortable learning environment for all students.",
   },
   {
     title: "Library",
-    icon: "📚",
-    image: "/library.jpg",
+    image: "",
     desc: "A well-stocked library with Odia, Hindi and English books, encouraging reading habits and self-learning among students.",
   },
   {
     title: "Playground",
-    icon: "⚽",
     image: "/Play1.jpeg",
     desc: "A spacious playground for physical activities, sports and outdoor games that promote health and teamwork.",
   },
@@ -29,8 +26,7 @@ const facilities = [
  
   {
     title: "First Aid & Health",
-    icon: "🏥",
-    image: null,
+    image: "",
     desc: "Basic first aid facility available on campus. Health checkup drives are conducted periodically for all students.",
   },
 ];
@@ -69,8 +65,8 @@ export default function Facilities() {
               />
             ) : (
               <div className="w-full h-48 bg-red-50 flex items-center
-                              justify-center text-7xl">
-                {f.icon}
+                              justify-center">
+                <span className="text-red-900 font-bold text-xl">Coming Soon</span>
               </div>
             )}
 
