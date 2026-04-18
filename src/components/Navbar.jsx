@@ -14,12 +14,8 @@ const navItems = [
   { label: "Facility", path: "/facility" },
   { label: "Faculty", path: "/faculty" },
   {
-    label: "Media / Bulletin",
-    dropdown: [
-      { label: "Events", path: "/events" },
-      { label: "Notices", path: "/notices" },
-      { label: "Announcements", path: "/announcements" },
-    ],
+    label: "Media / Bulletin", path :"/events",
+    
   },
   { label: "Contact Us", path: "/contact" },
 ];
