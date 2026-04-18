@@ -1,8 +1,9 @@
 /* ── NAVBAR WRAPPER ── */
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+   display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 32px !important;
   background-color: #8B0000;
   padding: 15px 36px;
   position: sticky;
