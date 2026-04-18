@@ -85,7 +85,6 @@ const founders = [
     nameOdia: "ଶ୍ରୀ ପବନ କୁମାର ନାୟକ",
     role: "Founder",
     roleOdia: "ପ୍ରତିଷ୍ଠାତା",
-    qual: "M.Com., LLB., B.Ed.",
     exp: "Experienced in school management, social work, event management, teaching and organising activities.",
     expOdia: "ବିଦ୍ୟାଳୟ ପରିଚାଳନା, ସମାଜ ସେବା, ଇଭେଣ୍ଟ ମ୍ୟାନେଜ୍‌ମେଣ୍ଟ, ଶିକ୍ଷାଦାନ ଓ ବିଭିନ୍ନ କାର୍ଯ୍ୟକ୍ରମ ଆୟୋଜନରେ ଅଭିଜ୍ଞ।",
     photo:"Paban.jpeg"
@@ -95,7 +94,6 @@ const founders = [
     nameOdia: "ଶ୍ରୀ ନିର୍ମଳ କୁମାର ସେନାପତି",
     role: "Founder",
     roleOdia: "ପ୍ରତିଷ୍ଠାତା",
-    qual: "",
     exp: "25 years of experience in the field of education. A well-organised leader, committed teacher and active social worker.",
     expOdia: "ଶିକ୍ଷା କ୍ଷେତ୍ରରେ ୨୫ ବର୍ଷର ଅଭିଜ୍ଞତା। ଏକ ସୁ-ସଂଗଠିତ ନେତା, ନିଷ୍ଠାବାନ ଶିକ୍ଷକ ଏବଂ ସକ୍ରିୟ ସମାଜ ସେବକ।",
     photo: "NirmalKumar.jpeg"
