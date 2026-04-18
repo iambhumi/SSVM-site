@@ -289,7 +289,7 @@ export default function Home() {
       
       {/* ── LEADERSHIP & FOUNDERS SECTION ── */}
 <section className="bg-white py-16 px-6">
-  <div className="max-w-5xl mx-auto">
+  <div className="max-w-6xl mx-auto">
 
     {/* Heading */}
     <div className="text-center mb-12">
@@ -300,127 +300,236 @@ export default function Home() {
       <div className="w-16 h-1 bg-yellow-400 rounded-full mx-auto mt-3" />
     </div>
 
-    {/* 3 Cards — same component, same style */}
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-      {/* ── Card 1: Principal ── */}
-      <div className="bg-red-50 rounded-2xl p-6 border border-red-100 shadow-sm
-                      hover:shadow-md transition-all duration-200 flex flex-col gap-4">
-        <div className="flex items-center gap-4">
-          <div className="w-16 h-16 rounded-full overflow-hidden border-4
-                          border-red-900 shadow-md flex-shrink-0">
-            <img
-              src="/faculty/SaratChandraMohapatraPrincipal.jpeg"
-              alt="Sarat Chandra Mahapatra"
-              className="w-full h-full object-cover object-top"
-            />
-          </div>
-          <div>
-            <p className="text-xs text-yellow-700 font-bold uppercase tracking-widest mb-0.5">
-              ପ୍ରଧାନ ଗୁରୁଜୀ
-            </p>
-            <h3 className="text-red-900 font-bold text-sm leading-tight">
-              ଶରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର
-            </h3>
-            <p className="text-gray-400 text-xs mt-0.5">Head Teacher</p>
-          </div>
-        </div>
-        <div className="w-full h-px bg-gradient-to-r from-yellow-400 via-red-200 to-transparent" />
-        <p className="text-red-800 font-bold text-xs tracking-wide uppercase">
-          ମୋ ପିଲାମାନଙ୍କୁ ପଦେ
+    {/* ── ROW 1: Chairmen (2 cards — centered) ── */}
+    <div className="mb-10">
+      <div className="flex items-center gap-3 mb-6">
+        <div className="w-8 h-0.5 bg-yellow-400 rounded-full" />
+        <p className="text-red-800 font-bold text-xs uppercase tracking-widest">
+          Chairman
         </p>
-        <p className="text-gray-600 text-sm leading-relaxed flex-1">
-          ଶାରଦା ବିଦ୍ୟାମନ୍ଦିରର ପରିସରକୁ ସ୍ୱାଗତ। ଏହା ତୁମ ଘରଠୁ ଦୂର ଆଉ ଏକ ଘର।
-          ତୁମ ଗୁରୁମା ଓ ଗୁରୁଜୀ ବାପା ମା'ଙ୍କର ବିକଳ୍ପ।
-        </p>
-        <div className="pt-2 border-t border-red-100">
-          <p className="text-red-900 font-bold text-xs">ଶରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର</p>
-          <p className="text-gray-400 text-xs">ପ୍ରଧାନ ଗୁରୁଜୀ, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର</p>
-        </div>
+        <div className="flex-1 h-0.5 bg-yellow-400/30 rounded-full" />
       </div>
 
-      {/* ── Card 2: Paban Kumar Nayak ── */}
-      <div className="bg-red-50 rounded-2xl p-6 border border-red-100 shadow-sm
-                      hover:shadow-md transition-all duration-200 flex flex-col gap-4">
-        <div className="flex items-center gap-4">
-          <div className="w-16 h-16 rounded-full overflow-hidden border-4
-                border-red-900 shadow-md flex-shrink-0">
-          <img
-            src="/Paban.jpeg"
-            alt="Paban Kumar Nayak"
-            className="w-full h-full object-cover object-top"
-            />
-            PN
-          </div>
-          <div>
-            <p className="text-xs text-yellow-700 font-bold uppercase tracking-widest mb-0.5">
-              ପ୍ରତିଷ୍ଠାତା
-            </p>
-            <h3 className="text-red-900 font-bold text-sm leading-tight">
-              ଶ୍ରୀ ପବନ କୁମାର ନାୟକ
-            </h3>
-            <p className="text-gray-400 text-xs mt-0.5">M.Com., LLB., B.Ed.</p>
-          </div>
-        </div>
-        <div className="w-full h-px bg-gradient-to-r from-yellow-400 via-red-200 to-transparent" />
-        <p className="text-red-800 font-bold text-xs tracking-wide uppercase">
-          ପ୍ରତିଷ୍ଠାତାଙ୍କ ବଚନ
-        </p>
-        <p className="text-gray-600 text-sm leading-relaxed flex-1">
-          ଶିକ୍ଷା, ସମାଜ ସେବା ଓ ସଂଗଠନ କ୍ଷେତ୍ରରେ ତାଙ୍କର ଅଦମ୍ୟ ଉଦ୍ୟମ ଏହି ବିଦ୍ୟାଳୟର ଭିତ୍ତି।
-          ତାଙ୍କ ଦୂରଦୃଷ୍ଟି ଓ ପରିଶ୍ରମ ଶାରଦା ବିଦ୍ୟାମନ୍ଦିରକୁ ଏକ ଆଦର୍ଶ ଅନୁଷ୍ଠାନ ରୂପେ ଗଢ଼ିଛି।
-        </p>
-        <div className="pt-2 border-t border-red-100">
-          <p className="text-red-900 font-bold text-xs">ଶ୍ରୀ ପବନ କୁମାର ନାୟକ</p>
-          <p className="text-gray-400 text-xs">ପ୍ରତିଷ୍ଠାତା, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର</p>
-        </div>
-      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
 
-      {/* ── Card 3: Nirmal Kumar Senapati ── */}
-      <div className="bg-red-50 rounded-2xl p-6 border border-red-100 shadow-sm
-                      hover:shadow-md transition-all duration-200 flex flex-col gap-4">
-        <div className="flex items-center gap-4">
-          <div className="w-16 h-16 rounded-full overflow-hidden border-4
-                          border-red-900 shadow-md flex-shrink-0">
-            <img
-              src="/NirmalKumar.jpeg"
-              alt="Nirmal Kumar Senapati"
-              className="w-full h-full object-cover object-top"
-              onError={(e) => {
-                e.target.style.display = "none";
-                e.target.parentNode.classList.add(
-                  "bg-red-800","flex","items-center","justify-center"
-                );
-                e.target.parentNode.innerHTML =
-                  '<span class="text-white text-xl font-bold">NS</span>';
-              }}
-            />
+        {/* Chairman 1 — Sarat Chandra Mohapatra */}
+        <div className="bg-gradient-to-br from-red-900 to-red-800 rounded-2xl p-6
+                        shadow-lg hover:shadow-xl hover:-translate-y-1
+                        transition-all duration-200 flex flex-col gap-4 border border-red-700">
+          <div className="flex items-center gap-4">
+            <div className="w-16 h-16 rounded-full overflow-hidden border-4
+                            border-yellow-400 shadow-md flex-shrink-0">
+              <img
+                src="/faculty/SaratChandraMohapatraPrincipal.jpeg"
+                alt="Sarat Chandra Mohapatra"
+                className="w-full h-full object-cover object-top"
+                onError={(e) => {
+                  e.target.style.display = "none";
+                  e.target.parentNode.className += " bg-red-700 flex items-center justify-center";
+                  e.target.parentNode.innerHTML = '<span class="text-yellow-400 text-xl font-bold">SC</span>';
+                }}
+              />
+            </div>
+            <div>
+              <span className="inline-block bg-yellow-400 text-red-900 text-xs font-bold
+                               px-2 py-0.5 rounded-full uppercase tracking-wide mb-1">
+                Chairman
+              </span>
+              <h3 className="text-white font-bold text-sm leading-tight">
+                ଶରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର
+              </h3>
+              <p className="text-yellow-300/70 text-xs mt-0.5">Head Teacher</p>
+            </div>
           </div>
-          <div>
-            <p className="text-xs text-yellow-700 font-bold uppercase tracking-widest mb-0.5">
-              ପ୍ରତିଷ୍ଠାତା
-            </p>
-            <h3 className="text-red-900 font-bold text-sm leading-tight">
-              ଶ୍ରୀ ନିର୍ମଳ କୁମାର ସେନାପତି
-            </h3>
-            <p className="text-gray-400 text-xs mt-0.5">25 ବର୍ଷ ଅଭିଜ୍ଞତା</p>
+          <div className="w-full h-px bg-gradient-to-r from-yellow-400 via-yellow-200/30 to-transparent" />
+          <p className="text-white/80 text-sm leading-relaxed flex-1">
+            ବିଦ୍ୟାଳୟର ଚେୟାରମ୍ୟାନ ଭାବେ ଶିକ୍ଷାର ଗୁଣମାନ ଓ ଛାତ୍ରଛାତ୍ରୀଙ୍କ
+            ସର୍ବାଙ୍ଗୀଣ ବିକାଶ ପ୍ରତି ସଦା ପ୍ରତିଶ୍ରୁତିବଦ୍ଧ।
+          </p>
+          <div className="pt-2 border-t border-white/10">
+            <p className="text-yellow-400 font-bold text-xs">ଶରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର</p>
+            <p className="text-white/50 text-xs">Chairman, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର</p>
           </div>
         </div>
-        <div className="w-full h-px bg-gradient-to-r from-yellow-400 via-red-200 to-transparent" />
-        <p className="text-red-800 font-bold text-xs tracking-wide uppercase">
-          ପ୍ରତିଷ୍ଠାତାଙ୍କ ବଚନ
-        </p>
-        <p className="text-gray-600 text-sm leading-relaxed flex-1">
-          ଶିକ୍ଷା ଜଗତରେ ୨୫ ବର୍ଷର ଅଭିଜ୍ଞତା ସହ ସେ ଅଗଣିତ ଛାତ୍ରଛାତ୍ରୀଙ୍କ ଜୀବନ ଆଲୋକିତ କରିଛନ୍ତି।
-          ଜଣେ ସୁ-ସଂଗଠିତ ଶିକ୍ଷକ ଓ ସମାଜ ସେବକ ଭାବେ ସେ ସଦା ବିଦ୍ୟାଳୟର ଗୌରବ।
-        </p>
-        <div className="pt-2 border-t border-red-100">
-          <p className="text-red-900 font-bold text-xs">ଶ୍ରୀ ନିର୍ମଳ କୁମାର ସେନାପତି</p>
-          <p className="text-gray-400 text-xs">ପ୍ରତିଷ୍ଠାତା, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର</p>
-        </div>
-      </div>
 
+        {/* Chairman 2 — Chakradhara Pradhan */}
+        <div className="bg-gradient-to-br from-red-900 to-red-800 rounded-2xl p-6
+                        shadow-lg hover:shadow-xl hover:-translate-y-1
+                        transition-all duration-200 flex flex-col gap-4 border border-red-700">
+          <div className="flex items-center gap-4">
+            <div className="w-16 h-16 rounded-full overflow-hidden border-4
+                            border-yellow-400 shadow-md flex-shrink-0">
+              <img
+                src="/faculty/Praasident ,Chakradhara pradhan.jpeg"
+                alt="Chakradhara Pradhan"
+                className="w-full h-full object-cover object-top"
+                onError={(e) => {
+                  e.target.style.display = "none";
+                  e.target.parentNode.className += " bg-red-700 flex items-center justify-center";
+                  e.target.parentNode.innerHTML = '<span class="text-yellow-400 text-xl font-bold">CP</span>';
+                }}
+              />
+            </div>
+            <div>
+              <span className="inline-block bg-yellow-400 text-red-900 text-xs font-bold
+                               px-2 py-0.5 rounded-full uppercase tracking-wide mb-1">
+                Chairman
+              </span>
+              <h3 className="text-white font-bold text-sm leading-tight">
+                Chakradhara Pradhan
+              </h3>
+              <p className="text-yellow-300/70 text-xs mt-0.5">President, Managing Committee</p>
+            </div>
+          </div>
+          <div className="w-full h-px bg-gradient-to-r from-yellow-400 via-yellow-200/30 to-transparent" />
+          <p className="text-white/80 text-sm leading-relaxed flex-1">
+            ପରିଚାଳନା କମିଟିର ଅଧ୍ୟକ୍ଷ ଭାବେ ବିଦ୍ୟାଳୟର ପ୍ରଶାସନ ଓ ଉନ୍ନୟନ
+            ପ୍ରତି ଅକ୍ଳାନ୍ତ ଭାବେ କାର୍ଯ୍ୟ କରି ଆସୁଛନ୍ତି।
+          </p>
+          <div className="pt-2 border-t border-white/10">
+            <p className="text-yellow-400 font-bold text-xs">Chakradhara Pradhan</p>
+            <p className="text-white/50 text-xs">Chairman, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର</p>
+          </div>
+        </div>
+
+      </div>
     </div>
+
+    {/* ── ROW 2: Co-Founders (3 cards) ── */}
+    <div>
+      <div className="flex items-center gap-3 mb-6">
+        <div className="w-8 h-0.5 bg-yellow-400 rounded-full" />
+        <p className="text-red-800 font-bold text-xs uppercase tracking-widest">
+          Co-Founders
+        </p>
+        <div className="flex-1 h-0.5 bg-yellow-400/30 rounded-full" />
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        {/* Co-Founder 1 */}
+        <div className="bg-red-50 rounded-2xl p-6 border border-red-100 shadow-sm
+                        hover:shadow-md hover:-translate-y-1 transition-all duration-200
+                        flex flex-col gap-4">
+          <div className="flex items-center gap-4">
+            <div className="w-16 h-16 rounded-full overflow-hidden border-4
+                            border-red-900 shadow-md flex-shrink-0">
+              <img
+                src="/faculty/SaratChandraMohapatraPrincipal.jpeg"
+                alt="Sarat Chandra Mohapatra"
+                className="w-full h-full object-cover object-top"
+                onError={(e) => {
+                  e.target.style.display = "none";
+                  e.target.parentNode.className += " bg-red-800 flex items-center justify-center";
+                  e.target.parentNode.innerHTML = '<span class="text-white text-xl font-bold">SC</span>';
+                }}
+              />
+            </div>
+            <div>
+              <span className="inline-block bg-red-100 text-red-800 text-xs font-bold
+                               px-2 py-0.5 rounded-full uppercase tracking-wide mb-1">
+                Co-Founder
+              </span>
+              <h3 className="text-red-900 font-bold text-sm leading-tight">
+                ଶରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର
+              </h3>
+              <p className="text-gray-400 text-xs mt-0.5">Head Teacher</p>
+            </div>
+          </div>
+          <div className="w-full h-px bg-gradient-to-r from-yellow-400 via-red-200 to-transparent" />
+          <p className="text-gray-600 text-sm leading-relaxed flex-1">
+            ଶାରଦା ବିଦ୍ୟାମନ୍ଦିରର ପ୍ରଧାନ ଶିକ୍ଷକ ଭାବେ ଦଶନ୍ଧି ଧରି ଛାତ୍ରଛାତ୍ରୀଙ୍କ
+            ଜୀବନ ଗଢ଼ିବାରେ ଅଗ୍ରଣୀ ଭୂମିକା ନିଭାଇ ଆସୁଛନ୍ତି।
+          </p>
+          <div className="pt-2 border-t border-red-100">
+            <p className="text-red-900 font-bold text-xs">ଶରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର</p>
+            <p className="text-gray-400 text-xs">Co-Founder, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର</p>
+          </div>
+        </div>
+
+        {/* Co-Founder 2 */}
+        <div className="bg-red-50 rounded-2xl p-6 border border-red-100 shadow-sm
+                        hover:shadow-md hover:-translate-y-1 transition-all duration-200
+                        flex flex-col gap-4">
+          <div className="flex items-center gap-4">
+            <div className="w-16 h-16 rounded-full overflow-hidden border-4
+                            border-red-900 shadow-md flex-shrink-0">
+              <img
+                src="/Paban.jpeg"
+                alt="Paban Kumar Nayak"
+                className="w-full h-full object-cover object-top"
+                onError={(e) => {
+                  e.target.style.display = "none";
+                  e.target.parentNode.className += " bg-red-800 flex items-center justify-center";
+                  e.target.parentNode.innerHTML = '<span class="text-white text-xl font-bold">NK</span>';
+                }}
+              />
+            </div>
+            <div>
+              <span className="inline-block bg-red-100 text-red-800 text-xs font-bold
+                               px-2 py-0.5 rounded-full uppercase tracking-wide mb-1">
+                Co-Founder
+              </span>
+              <h3 className="text-red-900 font-bold text-sm leading-tight">
+                ଶ୍ରୀ ପବନ କୁମାର ନାୟକ
+              </h3>
+              <p className="text-gray-400 text-xs mt-0.5">M.Com., LLB., B.Ed.</p>
+            </div>
+          </div>
+          <div className="w-full h-px bg-gradient-to-r from-yellow-400 via-red-200 to-transparent" />
+          <p className="text-gray-600 text-sm leading-relaxed flex-1">
+            ଶିକ୍ଷା, ସମାଜ ସେବା ଓ ସଂଗଠନ କ୍ଷେତ୍ରରେ ତାଙ୍କର ଅଦମ୍ୟ ଉଦ୍ୟମ ଓ
+            ଦୂରଦୃଷ୍ଟି ଏହି ବିଦ୍ୟାଳୟର ମୂଳ ଭିତ୍ତି।
+          </p>
+          <div className="pt-2 border-t border-red-100">
+            <p className="text-red-900 font-bold text-xs">ଶ୍ରୀ ପବନ କୁମାର ନାୟକ</p>
+            <p className="text-gray-400 text-xs">Co-Founder, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର</p>
+          </div>
+        </div>
+
+        {/* Co-Founder 3 */}
+        <div className="bg-red-50 rounded-2xl p-6 border border-red-100 shadow-sm
+                        hover:shadow-md hover:-translate-y-1 transition-all duration-200
+                        flex flex-col gap-4">
+          <div className="flex items-center gap-4">
+            <div className="w-16 h-16 rounded-full overflow-hidden border-4
+                            border-red-900 shadow-md flex-shrink-0">
+              <img
+                src="/faculty/Nirmal kumar senapati.jpeg"
+                alt="Nirmal kumar senapati"
+                className="w-full h-full object-cover object-top"
+                onError={(e) => {
+                  e.target.style.display = "none";
+                  e.target.parentNode.className += " bg-red-800 flex items-center justify-center";
+                  e.target.parentNode.innerHTML = '<span class="text-white text-xl font-bold">NK</span>';
+                }}
+              />
+            </div>
+            <div>
+              <span className="inline-block bg-red-100 text-red-800 text-xs font-bold
+                               px-2 py-0.5 rounded-full uppercase tracking-wide mb-1">
+                Co-Founder
+              </span>
+              <h3 className="text-red-900 font-bold text-sm leading-tight">
+                ଶ୍ରୀ ନିର୍ମଳ କୁମାର ସେନାପତି
+              </h3>
+              <p className="text-gray-400 text-xs mt-0.5">25 ବର୍ଷ ଅଭିଜ୍ଞତା</p>
+            </div>
+          </div>
+          <div className="w-full h-px bg-gradient-to-r from-yellow-400 via-red-200 to-transparent" />
+          <p className="text-gray-600 text-sm leading-relaxed flex-1">
+            ଶିକ୍ଷା ଜଗତରେ ୨୫ ବର୍ଷର ଅଭିଜ୍ଞତା ସହ ଅଗଣିତ ଛାତ୍ରଛାତ୍ରୀଙ୍କ
+            ଜୀବନ ଆଲୋକିତ କରିଛନ୍ତି।
+          </p>
+          <div className="pt-2 border-t border-red-100">
+            <p className="text-red-900 font-bold text-xs">ଶ୍ରୀ ନିର୍ମଳ କୁମାର ସେନାପତି</p>
+            <p className="text-gray-400 text-xs">Co-Founder, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </section>
           

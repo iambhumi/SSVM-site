@@ -112,16 +112,8 @@ function FacultyCard({ person, showRole = false }) {
 }
 
 export default function Faculty() {
-  const [filter, setFilter] = useState("all");
 
-  const filtered =
-    filter === "all"
-      ? teachingStaff
-      : teachingStaff.filter((t) =>
-          filter === "i-X"
-            ? t.level === "I – VIII"
-            : t.level === "I – V"
-        );
+  
 
   return (
     <main className="min-h-screen bg-gray-50">
@@ -163,39 +155,16 @@ export default function Faculty() {
 
       {/* ── TEACHING STAFF ── */}
       <section className="max-w-7xl mx-auto px-4 py-12">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between
-                        gap-4 mb-8">
-          <div>
+            <div className="mb-8">
             <h2 className="text-2xl font-bold text-red-900">Teaching Staff</h2>
             <p className="text-gray-500 text-sm mt-1">
-              2026–27 · Sarada Vidya Mandir
-            </p>
-          </div>
-
-          {/* Filter Buttons */}
-          <div className="inline-flex rounded-full border-2 border-red-900 overflow-hidden">
-            {[
-              { key: "all",    label: "All"       },
-              
-            ].map((f) => (
-              <button
-                key={f.key}
-                onClick={() => setFilter(f.key)}
-                className={`px-4 py-2 text-xs font-bold transition-all duration-200 ${
-                  filter === f.key
-                    ? "bg-red-900 text-white"
-                    : "bg-white text-red-900 hover:bg-red-50"
-                }`}
-              >
-                {f.label}
-              </button>
-            ))}
-          </div>
-        </div>
+            2026–27 · Sarada Vidya Mandir
+          </p>
+            </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4
                         lg:grid-cols-5 xl:grid-cols-6 gap-4">
-          {filtered.map((teacher) => (
+          {teachingStaff.map((teacher) => (
             <FacultyCard key={teacher.id} person={teacher} />
           ))}
         </div>
