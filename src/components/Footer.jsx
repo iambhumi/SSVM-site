@@ -1,6 +1,6 @@
 // src/components/Footer.jsx
 import { Link } from "react-router-dom";
-import { ArrowUp } from "@phosphor-icons/react";
+import { EnvelopeSimple, MapPin, Phone } from "@phosphor-icons/react";
 
 const quickLinks = [
   { label: "Home",                path: "/"                  },
@@ -49,17 +49,7 @@ export default function Footer() {
       {/* ── MAIN FOOTER ── */}
       <footer className="bg-gray-900 text-gray-300 relative">
 
-        {/* Scroll to Top Button */}
-        <button
-          onClick={scrollToTop}
-          className="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10
-                     bg-yellow-400 hover:bg-yellow-300 text-red-900 rounded-full
-                     flex items-center justify-center shadow-lg
-                     hover:scale-110 transition-all duration-200 z-20"
-          aria-label="Go to top"
-        >
-          <ArrowUp size={20} weight="bold" />
-        </button>
+        
 
         {/* ── 4 COLUMNS ── */}
         <div className="max-w-6xl mx-auto px-6 pt-14 pb-10 grid grid-cols-1
@@ -149,7 +139,7 @@ export default function Footer() {
 
     {/* Address */}
     <li className="flex items-start gap-3">
-      <span className="text-yellow-400 text-sm mt-0.5 not-italic">📍</span>
+      <MapPin size={18} weight="bold" className="text-white mt-0.5" aria-hidden="true" />
       <span className="text-gray-400 text-sm leading-relaxed tracking-normal">
         Sarada Vidya Mandir<br />
         AT/PO: Bhandaripokhari<br />
@@ -160,7 +150,7 @@ export default function Footer() {
 
     {/* Phone */}
     <li className="flex items-start gap-3">
-      <span className="text-yellow-400 text-sm mt-0.5 not-italic">📞</span>
+      <Phone size={18} weight="bold" className="text-white-400 mt-0.5" aria-hidden="true" />
       <div className="flex flex-col gap-1">
         <a href="tel:+918895713070"
            className="text-gray-400 hover:text-yellow-400 text-sm
@@ -182,7 +172,7 @@ export default function Footer() {
 
     {/* Email */}
     <li className="flex items-start gap-3">
-      <span className="text-yellow-400 text-sm mt-0.5 not-italic">✉️</span>
+      <EnvelopeSimple size={18} weight="bold" className="text-white-400 mt-0.5" aria-hidden="true" />
       <a
         href="mailto:saradavidyamandir@gmail.com"
         className="text-gray-400 hover:text-yellow-400 text-sm
