@@ -159,7 +159,7 @@ export default function Footer() {
                 <span className="text-yellow-400">📞</span>
                 <a
                   href="tel:8895713070, 9556740283, 7847955317"
-                  className="hover:text-yellow-400 transition-colors duration-200"
+                  className="text-gray-400 hover:text-yellow-400 text-sm transition-colors duration-200"
                 >
                   +91 8895713070, +91 9556740283, +91 7847955317
                 </a>
@@ -168,8 +168,7 @@ export default function Footer() {
                 <span className="text-yellow-400">✉️</span>
                 <a
                   href="saradavidyamandir@gmail.com"
-                  className="hover:text-yellow-400 transition-colors duration-200
-                             break-all text-xs"
+                  className="text-gray-400 hover:text-yellow-400 text-sm transition-colors duration-200 break-all"
                 >
                   saradavidyamandir@gmail.com
                 </a>
@@ -183,14 +182,14 @@ export default function Footer() {
         </div>
 
         {/* ── COPYRIGHT BAR ── */}
-        
-<p className="text-gray-400 text-xs mt-1 text-center">
-  © {new Date().getFullYear()} All rights reserved by{" "}
-  <a href="https://swiftrise.in" target="_blank" rel="noopener noreferrer"
-     className="text-yellow-400 hover:text-yellow-300 underline underline-offset-2 transition-colors duration-150">
-    SwiftRise
-  </a>
-</p>
+        <hr className="border-gray-700 my-4" />
+        <p className="text-gray-400 text-xs mt-1 text-center">
+          © {new Date().getFullYear()} All rights reserved by{" "}
+          <a href="https://swiftrise.in" target="_blank" rel="noopener noreferrer"
+             className="text-yellow-400 hover:text-yellow-300 underline underline-offset-2 transition-colors duration-150">
+            SwiftRise Solution Pvt.Ltd 
+          </a>
+        </p>
 
       </footer>
     </>
