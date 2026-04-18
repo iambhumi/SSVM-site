@@ -19,8 +19,7 @@ const achievementsSub = [
 
 const mediaSub = [
   { path: "/events", label: "Events" },
-  { path: "/media/notices", label: "Notices" },
-  { path: "/media/announcements", label: "Announcements" },
+  
 ];
 
 export default function Navbar() {
@@ -66,18 +65,18 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed left-0 top-2 z-50 w-full translate-x-0 border-b border-[#f6efe2] md:top-3">
-      <div className={`animate-navbarReveal px-4 transition-all duration-300 sm:px-6 lg:px-8 ${scrolled ? 'bg-[#980000] bg-opacity-95' : 'bg-transparent'}`}>
+    <nav className="fixed left-0 top-2 z-50 w-full translate-x-0 border-b border-[#e5e7eb] md:top-3">
+      <div className={`animate-navbarReveal px-4 transition-all duration-300 sm:px-6 lg:px-8 ${scrolled ? 'bg-[#980000] bg-opacity-95' : 'bg-white/95 backdrop-blur-sm shadow-md'}`}>
         <div className="relative z-60 flex h-16 items-center justify-between md:h-14 md:justify-center lg:h-16">
           <Link to="/" className="flex items-center gap-0 md:absolute md:left-10">
-            <div className="ml-1 flex h-15 w-15 items-center justify-center text-[#f6efe2] md:ml-4">
+            <div className="ml-1 flex h-15 w-15 items-center justify-center md:ml-4">
               <img src="/Logo.jpeg" alt="Logo" className="h-8 w-8 rounded-full object-contain md:h-10 md:w-10" style={{ display: "block" }} />
             </div>
             <div className="flex flex-col leading-tight ml-3 items-start">
-              <span className="text-yellow-400 font-bold text-xl md:text-sm tracking-wide" style={{ fontFamily: "'Noto Sans Odia', sans-serif" }}>
+              <span className={`font-bold text-xl md:text-sm tracking-wide transition-colors duration-300 ${scrolled ? 'text-yellow-400' : 'text-[#980000]'}`} style={{ fontFamily: "'Noto Sans Odia', sans-serif" }}>
                 ଶାରଦା ବିଦ୍ୟା ମନ୍ଦିର
               </span>
-              <span className="text-white/80 text-[9px] md:text-[15px] tracking-[0.12em] uppercase font-medium">
+              <span className={`text-[9px] md:text-[15px] tracking-[0.12em] uppercase font-medium transition-colors duration-300 ${scrolled ? 'text-white/80' : 'text-gray-700'}`}>
                 Sarada Vidya Mandir
               </span>
             </div>
@@ -92,12 +91,12 @@ export default function Navbar() {
                     <Link
                       to={link.path}
                       onClick={handleNavClick}
-                      className={`group relative flex items-center gap-1 px-2 py-1 text-xs font-medium uppercase tracking-[0.06em] transition-colors duration-300 ${scrolled ? "text-[#f6efe2] hover:text-[#facc15]" : "text-[#f6efe2] hover:text-[#f2c56f]"}`}
+                      className={`group relative flex items-center gap-1 px-2 py-1 text-xs font-medium uppercase tracking-[0.06em] transition-colors duration-300 ${scrolled ? "text-[#f6efe2] hover:text-[#facc15]" : "text-[#8B4513] hover:text-[#980000]"}`}
                     >
                       {link.label}
                       <svg className="ml-2 h-4 w-4 md:h-5 md:w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5.23 7.21a.75.75 0 011.06.02L10 10.939l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/></svg>
                       <span
-                        className={`absolute bottom-1 left-1 right-1 h-0.5 rounded transition-all duration-500 ease-in-out ${isActive ? "bg-[#facc15]" : (scrolled ? "bg-[#facc15]" : "bg-[#f2c56f]")} ${isActive ? "w-[calc(100%-0.5rem)] opacity-100" : "w-0 opacity-0 group-hover:w-[calc(100%-0.5rem)] group-hover:opacity-70"} group-hover:bg-[#facc15]`}
+                        className={`absolute bottom-1 left-1 right-1 h-0.5 rounded transition-all duration-500 ease-in-out ${isActive ? "bg-[#980000]" : (scrolled ? "bg-[#facc15]" : "bg-[#D2691E]")} ${isActive ? "w-[calc(100%-0.5rem)] opacity-100" : "w-0 opacity-0 group-hover:w-[calc(100%-0.5rem)] group-hover:opacity-70"} ${scrolled ? 'group-hover:bg-[#facc15]' : 'group-hover:bg-[#980000]'}`}
                         style={{ transitionProperty: "width, opacity" }}
                       />
                     </Link>
@@ -105,7 +104,7 @@ export default function Navbar() {
                     <div className={`absolute left-0 top-full mt-1 z-50 w-44 rounded ${achDropdownOpen ? "block" : "hidden"}`} onMouseEnter={() => { if (achCloseTimer.current) { clearTimeout(achCloseTimer.current); achCloseTimer.current = null; } setAchDropdownOpen(true); }} onMouseLeave={() => { if (achCloseTimer.current) clearTimeout(achCloseTimer.current); achCloseTimer.current = setTimeout(() => setAchDropdownOpen(false), 180); }}>
                       <div className="bg-[#ffffff] rounded shadow-lg py-2">
                         {achievementsSub.map((s) => (
-                          <Link key={s.path} to={s.path} onClick={handleNavClick} className="block px-4 py-2 text-xs text-[#3a1117]">
+                          <Link key={s.path} to={s.path} onClick={handleNavClick} className="block px-4 py-2 text-xs text-[#3a1117] hover:bg-[#f3f1ef]">
                             {s.label}
                           </Link>
                         ))}
@@ -120,12 +119,12 @@ export default function Navbar() {
                     <Link
                       to={link.path}
                       onClick={handleNavClick}
-                      className={`group relative flex items-center gap-1 px-2 py-1 text-xs font-medium uppercase tracking-[0.06em] transition-colors duration-300 ${scrolled ? "text-[#f6efe2] hover:text-[#facc15]" : "text-[#f6efe2] hover:text-[#f2c56f]"}`}
+                      className={`group relative flex items-center gap-1 px-2 py-1 text-xs font-medium uppercase tracking-[0.06em] transition-colors duration-300 ${scrolled ? "text-[#f6efe2] hover:text-[#facc15]" : "text-[#8B4513] hover:text-[#980000]"}`}
                     >
                       {link.label}
                       <svg className="ml-2 h-4 w-4 md:h-5 md:w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5.23 7.21a.75.75 0 011.06.02L10 10.939l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/></svg>
                       <span
-                        className={`absolute bottom-1 left-1 right-1 h-0.5 rounded transition-all duration-500 ease-in-out ${isActive ? "bg-[#facc15]" : (scrolled ? "bg-[#facc15]" : "bg-[#f2c56f]")} ${isActive ? "w-[calc(100%-0.5rem)] opacity-100" : "w-0 opacity-0 group-hover:w-[calc(100%-0.5rem)] group-hover:opacity-70"} group-hover:bg-[#facc15]`}
+                        className={`absolute bottom-1 left-1 right-1 h-0.5 rounded transition-all duration-500 ease-in-out ${isActive ? "bg-[#980000]" : (scrolled ? "bg-[#facc15]" : "bg-[#D2691E]")} ${isActive ? "w-[calc(100%-0.5rem)] opacity-100" : "w-0 opacity-0 group-hover:w-[calc(100%-0.5rem)] group-hover:opacity-70"} ${scrolled ? 'group-hover:bg-[#facc15]' : 'group-hover:bg-[#980000]'}`}
                         style={{ transitionProperty: "width, opacity" }}
                       />
                     </Link>
@@ -148,11 +147,11 @@ export default function Navbar() {
                   key={link.path}
                   to={link.path}
                   onClick={handleNavClick}
-                  className={`group relative px-2 py-1 text-xs font-medium uppercase tracking-[0.06em] transition-colors duration-300 ${scrolled ? "text-[#f6efe2] hover:text-[#facc15]" : "text-[#f6efe2] hover:text-[#f2c56f]"}`}
+                  className={`group relative px-2 py-1 text-xs font-medium uppercase tracking-[0.06em] transition-colors duration-300 ${scrolled ? "text-[#f6efe2] hover:text-[#facc15]" : "text-[#8B4513] hover:text-[#980000]"}`}
                 >
                   {link.label}
                   <span
-                    className={`absolute bottom-1 left-1 right-1 h-0.5 rounded transition-all duration-500 ease-in-out ${isActive ? "bg-[#facc15]" : (scrolled ? "bg-[#facc15]" : "bg-[#f2c56f]")} ${isActive ? "w-[calc(100%-0.5rem)] opacity-100" : "w-0 opacity-0 group-hover:w-[calc(100%-0.5rem)] group-hover:opacity-70"} group-hover:bg-[#facc15]`}
+                    className={`absolute bottom-1 left-1 right-1 h-0.5 rounded transition-all duration-500 ease-in-out ${isActive ? "bg-[#980000]" : (scrolled ? "bg-[#facc15]" : "bg-[#D2691E]")} ${isActive ? "w-[calc(100%-0.5rem)] opacity-100" : "w-0 opacity-0 group-hover:w-[calc(100%-0.5rem)] group-hover:opacity-70"} ${scrolled ? 'group-hover:bg-[#facc15]' : 'group-hover:bg-[#980000]'}`}
                     style={{ transitionProperty: "width, opacity" }}
                   />
                 </Link>
@@ -161,16 +160,16 @@ export default function Navbar() {
           </div>
 
           <button
-            className={`inline-flex items-center gap-2 border border-[#f6efe2]/35 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] transition-all duration-300 md:hidden ${scrolled ? "bg-[#2b0a14] text-[#f6efe2]" : "bg-[#f6efe2] text-[#2b0a14]"}`}
+            className={`inline-flex items-center gap-2 border px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] transition-all duration-300 md:hidden ${scrolled ? "bg-[#2b0a14] text-[#f6efe2] border-[#f6efe2]/35" : "bg-[#980000] text-white border-[#980000]"}`}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
           >
             <span>{menuOpen ? "Close" : "Menu"}</span>
             <span className="relative h-4 w-4 shrink-0">
-              <span className={`absolute left-0 top-1/2 block h-0.5 w-4 -translate-y-1.5 rounded transition-all duration-300 ${scrolled ? "bg-[#f6efe2]" : "bg-[#2b0a14]"} ${menuOpen ? "translate-y-0 rotate-45" : ""}`}></span>
-              <span className={`absolute left-0 top-1/2 block h-0.5 w-4 rounded transition-all duration-300 ${scrolled ? "bg-[#f6efe2]" : "bg-[#2b0a14]"} ${menuOpen ? "opacity-0" : "opacity-100"}`}></span>
-              <span className={`absolute left-0 top-1/2 block h-0.5 w-4 translate-y-1.5 rounded transition-all duration-300 ${scrolled ? "bg-[#f6efe2]" : "bg-[#2b0a14]"} ${menuOpen ? "translate-y-0 -rotate-45" : ""}`}></span>
+              <span className={`absolute left-0 top-1/2 block h-0.5 w-4 -translate-y-1.5 rounded transition-all duration-300 ${scrolled ? "bg-[#f6efe2]" : "bg-white"} ${menuOpen ? "translate-y-0 rotate-45" : ""}`}></span>
+              <span className={`absolute left-0 top-1/2 block h-0.5 w-4 rounded transition-all duration-300 ${scrolled ? "bg-[#f6efe2]" : "bg-white"} ${menuOpen ? "opacity-0" : "opacity-100"}`}></span>
+              <span className={`absolute left-0 top-1/2 block h-0.5 w-4 translate-y-1.5 rounded transition-all duration-300 ${scrolled ? "bg-[#f6efe2]" : "bg-white"} ${menuOpen ? "translate-y-0 -rotate-45" : ""}`}></span>
             </span>
           </button>
         </div>
@@ -182,16 +181,16 @@ export default function Navbar() {
       )}
 
       <div
-        className={`fixed right-0 top-0 z-50 h-full w-2/3 max-w-xs transform transition-transform duration-300 md:hidden ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed right-0 top-0 z-50 h-full w-1/2 max-w-sm transform transition-transform duration-300 md:hidden ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
         style={{ boxShadow: menuOpen ? "rgba(0,0,0,0.12) -4px 0px 24px" : undefined }}
         aria-hidden={!menuOpen}
       >
         <div className={`flex h-full flex-col  bg-[#2b0a14] p-4`}>
-          <div className="flex items-center justify-between pb-4"> 
-            <div className="w-3/4">
-              <div className={`font-serif text-sm text-[#f6efe2] truncate`}>Quick navigation</div>
-             </div>
-            <button className={`ml-2  bg-[#f6efe2] px-2 py-1 text-xs font-bold uppercase tracking-wider text-[#2b0a14]`} onClick={() => setMenuOpen(false)} aria-label="Close menu">Close</button>
+          <div className="flex items-center gap-2 pb-4 justify-end">
+            <div className="flex-shrink-0">
+              <div className={`font-serif text-sm text-[#f6efe2]`}>Quick navigation</div>
+            </div>
+            <button className={`bg-[#f6efe2] px-2 py-1 text-xs font-bold uppercase tracking-wider text-[#2b0a14]`} onClick={() => setMenuOpen(false)} aria-label="Close menu">Close</button>
           </div>
 
           <div className="mt-3 grid flex-1 grid-cols-1 gap-2"> 
