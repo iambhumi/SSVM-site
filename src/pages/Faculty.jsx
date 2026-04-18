@@ -118,7 +118,7 @@ export default function Faculty() {
     filter === "all"
       ? teachingStaff
       : teachingStaff.filter((t) =>
-          filter === "i-viii"
+          filter === "i-X"
             ? t.level === "I – VIII"
             : t.level === "I – V"
         );
@@ -151,7 +151,7 @@ export default function Faculty() {
           {[
             { label: "Teaching Staff",     value: "31" },
             { label: "Non-Teaching Staff", value: "4"  },
-            { label: "Classes Covered",    value: "I–VIII" },
+            { label: "Classes Covered",    value: "I–X" },
           ].map((s) => (
             <div key={s.label} className="text-center">
               <p className="text-yellow-400 text-3xl font-bold">{s.value}</p>
@@ -176,8 +176,7 @@ export default function Faculty() {
           <div className="inline-flex rounded-full border-2 border-red-900 overflow-hidden">
             {[
               { key: "all",    label: "All"       },
-              { key: "i-viii", label: "Class I–VIII" },
-              { key: "i-v",    label: "Class I–V"    },
+              
             ].map((f) => (
               <button
                 key={f.key}

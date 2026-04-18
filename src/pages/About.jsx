@@ -13,7 +13,7 @@ const principalMessage = {
       "ନୂଆ ଶିକ୍ଷାବର୍ଷ ଆରମ୍ଭ ସମୟରେ ମୁଁ ସମସ୍ତ ଛାତ୍ରଛାତ୍ରୀଙ୍କୁ ମୋ ଆଶୀର୍ବାଦ ଓ ଶୁଭେଚ୍ଛା ଜଣାଉଛି। ଆଶା କରୁଛି ଏ ବର୍ଷ ଆପଣମାନେ ନିଜ ଲକ୍ଷ୍ୟ ହାସଲ କରିବାପାଇଁ ଆହୁରି ଅଧିକ ପରିଶ୍ରମ କରିବେ।",
       "ମାନବ ଜୀବନରେ ଶିକ୍ଷା ଅତ୍ୟନ୍ତ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ। ଏହା ଆମକୁ ମୂଲ୍ୟବୋଧ, ଜ୍ଞାନ ଓ ଶୃଙ୍ଖଳା ଶିଖାଏ। ଆମ ବିଦ୍ୟାଳୟରେ ଶିକ୍ଷାର ସହ ନୈତିକ ମୂଲ୍ୟବୋଧ, ଶୃଙ୍ଖଳା ଓ ଉତ୍ସର୍ଗ ଉପରେ ବିଶେଷ ଗୁରୁତ୍ୱ ଦିଆଯାଏ।",
       "ଛାତ୍ରଛାତ୍ରୀମାନେ ନିଜ ଶିକ୍ଷକଙ୍କୁ ସମ୍ମାନ ଦିଅନ୍ତୁ ଓ ନିଷ୍ଠାର ସହ ନିଜ ଦାୟିତ୍ୱ ପୂର୍ଣ୍ଣ କରନ୍ତୁ। ବିଶ୍ୱାସ ଅଛି ଯେ ଆପଣ ଏହି ଅନୁଷ୍ଠାନରେ ଉତ୍ତମ ଶିକ୍ଷା ଲାଭ କରିବେ ଏବଂ ଜୀବନରେ ସଫଳ ହୋଇ ଜାତିର ଅଗ୍ରଗତିରେ ଅବଦାନ ରଖିବେ।",
-      "— ସାରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର",
+      "— ଶରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର",
     ],
     name: "ଶରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର",
     designation: "ପ୍ରଧାନ ଶିକ୍ଷକ, ଶାରଦା ବିଦ୍ୟା ମନ୍ଦିର",
@@ -226,27 +226,21 @@ export default function About() {
                             duration-200 hover:-translate-y-1">
               <div className="flex items-center gap-3 mb-4">
 
-                {/* ✅ Clickable icon toggles vision language */}
-                <button
-                  onClick={() =>
-                    setVisionLang((l) => (l === "odia" ? "english" : "odia"))
-                  }
-                  title={visionLang === "odia" ? "Switch to English" : "Switch to Odia"}
-                  className="w-12 h-12 rounded-xl bg-red-50 flex items-center
-                             justify-center hover:bg-red-100 hover:scale-110
-                             transition-all duration-200 cursor-pointer
-                             border-2 border-transparent hover:border-red-300
-                             flex-shrink-0"
-                >
-                  <Eye size={28} weight="duotone" color="#8B0000" />
-                </button>
+                <div
+                onClick={() => setVisionLang(visionLang === "odia" ? "english" : "odia")}
+                className="... your existing card classNames ... cursor-pointer"
+               >
+              
+              <Eye size={40} weight="duotone" color="#8B0000" />
+              
+              </div>
 
                 <div>
                   <h3 className="text-red-900 text-xl font-bold">{vision.title}</h3>
                   {/* Language pill */}
-                  <span className="text-xs text-gray-400 font-medium">
-                    {visionLang === "odia" ? "ଓଡ଼ିଆ · Click icon for English" : "English · Click icon for Odia"}
-                  </span>
+                  <p className="text-gray-300 text-xs mt-3 italic">
+                  {visionLang === "odia" ? "Click card for English →" : "← କ୍ଲିକ୍ କରନ୍ତୁ"}
+                  </p>
                 </div>
               </div>
 
@@ -271,26 +265,20 @@ export default function About() {
               <div className="flex items-center gap-3 mb-4">
 
                 {/* ✅ Clickable icon toggles mission language */}
-                <button
-                  onClick={() =>
-                    setMissionLang((l) => (l === "odia" ? "english" : "odia"))
-                  }
-                  title={missionLang === "odia" ? "Switch to English" : "Switch to Odia"}
-                  className="w-12 h-12 rounded-xl bg-red-50 flex items-center
-                             justify-center hover:bg-red-100 hover:scale-110
-                             transition-all duration-200 cursor-pointer
-                             border-2 border-transparent hover:border-red-300
-                             flex-shrink-0"
-                >
-                  <Target size={28} weight="duotone" color="#8B0000" />
-                </button>
+                <div
+                onClick={() => setMissionLang(missionLang === "odia" ? "english" : "odia")}
+                className="... your existing card classNames ... cursor-pointer"
+                    > 
+                <Target size={40} weight="duotone" color="#8B0000" />
+                  
+                </div>
 
                 <div>
                   <h3 className="text-red-900 text-xl font-bold">{mission.title}</h3>
                   {/* Language pill */}
-                  <span className="text-xs text-gray-400 font-medium">
-                    {missionLang === "odia" ? "ଓଡ଼ିଆ · Click icon for English" : "English · Click icon for Odia"}
-                  </span>
+                  <p className="text-gray-300 text-xs mt-3 italic">
+                  {missionLang === "odia" ? "Click card for English →" : "← କ୍ଲିକ୍ କରନ୍ତୁ"}
+                  </p>
                 </div>
               </div>
 

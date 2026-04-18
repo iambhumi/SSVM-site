@@ -78,27 +78,7 @@ const features = [
   },
 ];
 
-// ── FOUNDERS DATA ──
-const founders = [
-  {
-    name: "Mr. Paban Kumar Nayak",
-    nameOdia: "ଶ୍ରୀ ପବନ କୁମାର ନାୟକ",
-    role: "Founder",
-    roleOdia: "ପ୍ରତିଷ୍ଠାତା",
-    exp: "Experienced in school management, social work, event management, teaching and organising activities.",
-    expOdia: "ବିଦ୍ୟାଳୟ ପରିଚାଳନା, ସମାଜ ସେବା, ଇଭେଣ୍ଟ ମ୍ୟାନେଜ୍‌ମେଣ୍ଟ, ଶିକ୍ଷାଦାନ ଓ ବିଭିନ୍ନ କାର୍ଯ୍ୟକ୍ରମ ଆୟୋଜନରେ ଅଭିଜ୍ଞ।",
-    photo:"Paban.jpeg"
-  },
-  {
-    name: "Mr. Nirmal Kumar Senapati",
-    nameOdia: "ଶ୍ରୀ ନିର୍ମଳ କୁମାର ସେନାପତି",
-    role: "Founder",
-    roleOdia: "ପ୍ରତିଷ୍ଠାତା",
-    exp: "25 years of experience in the field of education. A well-organised leader, committed teacher and active social worker.",
-    expOdia: "ଶିକ୍ଷା କ୍ଷେତ୍ରରେ ୨୫ ବର୍ଷର ଅଭିଜ୍ଞତା। ଏକ ସୁ-ସଂଗଠିତ ନେତା, ନିଷ୍ଠାବାନ ଶିକ୍ଷକ ଏବଂ ସକ୍ରିୟ ସମାଜ ସେବକ।",
-    photo: "NirmalKumar.jpeg"
-  },
-];
+
 
 function FeatureCard({ feature }) {
   const [showEng, setShowEng] = useState(false);
@@ -110,19 +90,7 @@ function FeatureCard({ feature }) {
                  hover:shadow-md hover:border-red-200 transition-all
                  duration-200 hover:-translate-y-1"
     >
-      <button
-        onClick={() => setShowEng((v) => !v)}
-        title={showEng ? "ଓଡ଼ିଆ ଦେଖନ୍ତୁ" : "See in English"}
-        className="focus:outline-none group"
-        aria-label="Toggle language"
-      >
-        <Icon
-          size={40}
-          weight="duotone"
-          color="#8B0000"
-          className="group-hover:scale-110 transition-transform duration-200"
-        />
-      </button>
+      <Icon className="text-red-900 text-2xl mb-4 cursor-pointer" onClick={() => setShowEng(!showEng)} />
 
       <h4 className="text-red-900 font-bold mt-4 mb-2 text-base">
         {showEng ? engTitle : odiaTitle}
@@ -132,15 +100,13 @@ function FeatureCard({ feature }) {
       </p>
 
       <p className="text-gray-300 text-xs mt-3 italic">
-        {showEng ? "← ଓଡ଼ିଆ" : "English →"} (click icon)
+        {showEng ? "← ଓଡ଼ିଆ" : "English →"}
       </p>
     </div>
   );
 }
 
 function FounderCard({ founder }) {
-  const [showEng, setShowEng] = useState(false);
-
   function getInitials(name) {
     return name
       .replace("Mr.", "")
@@ -175,14 +141,11 @@ function FounderCard({ founder }) {
 
         <div>
           <p className="text-xs text-yellow-700 font-bold uppercase tracking-widest mb-1">
-            {showEng ? founder.role : founder.roleOdia}
+            {founder.roleOdia}
           </p>
           <h3 className="text-red-900 font-bold text-base leading-tight">
-            {showEng ? founder.name : founder.nameOdia}
+            {founder.nameOdia}
           </h3>
-          {!showEng && (
-            <p className="text-gray-500 text-xs mt-0.5">{founder.name}</p>
-          )}
           {founder.qual && (
             <p className="text-yellow-700 text-xs font-semibold mt-0.5">
               {founder.qual}
@@ -196,19 +159,8 @@ function FounderCard({ founder }) {
 
       {/* Experience */}
       <p className="text-gray-600 text-sm leading-relaxed flex-1">
-        <b>{showEng ? founder.exp : founder.expOdia}</b>
+        <b>{founder.expOdia}</b>
       </p>
-
-      {/* Toggle button */}
-      <button
-        onClick={() => setShowEng((v) => !v)}
-        className="self-start mt-auto text-xs font-bold text-red-700
-                   border border-red-200 bg-white rounded-full px-4 py-1.5
-                   hover:bg-red-800 hover:text-white hover:border-red-800
-                   transition-all duration-200"
-      >
-        {showEng ? "ଓଡ଼ିଆ ଦେଖନ୍ତୁ" : "See in English"}
-      </button>
     </div>
   );
 }
@@ -334,121 +286,144 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ── LEADERSHIP MESSAGE SECTION ── */}
-      <section className="bg-white py-16 px-6">
-        <div className="max-w-5xl mx-auto">
+      
+      {/* ── LEADERSHIP & FOUNDERS SECTION ── */}
+<section className="bg-white py-16 px-6">
+  <div className="max-w-5xl mx-auto">
 
-          <div className="text-center mb-12">
-            <p className="text-yellow-600 font-semibold tracking-widest uppercase text-xs mb-2">
-              ନେତୃତ୍ୱ
+    {/* Heading */}
+    <div className="text-center mb-12">
+      <p className="text-yellow-600 font-semibold tracking-widest uppercase text-xs mb-2">
+        ନେତୃତ୍ୱ ଓ ପ୍ରତିଷ୍ଠାତା
+      </p>
+      <h2 className="text-red-900 text-3xl font-bold">Leadership & Founders</h2>
+      <div className="w-16 h-1 bg-yellow-400 rounded-full mx-auto mt-3" />
+    </div>
+
+    {/* 3 Cards — same component, same style */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      {/* ── Card 1: Principal ── */}
+      <div className="bg-red-50 rounded-2xl p-6 border border-red-100 shadow-sm
+                      hover:shadow-md transition-all duration-200 flex flex-col gap-4">
+        <div className="flex items-center gap-4">
+          <div className="w-16 h-16 rounded-full overflow-hidden border-4
+                          border-red-900 shadow-md flex-shrink-0">
+            <img
+              src="/faculty/SaratChandraMohapatraPrincipal.jpeg"
+              alt="Sarat Chandra Mahapatra"
+              className="w-full h-full object-cover object-top"
+            />
+          </div>
+          <div>
+            <p className="text-xs text-yellow-700 font-bold uppercase tracking-widest mb-0.5">
+              ପ୍ରଧାନ ଗୁରୁଜୀ
             </p>
-            <h2 className="text-red-900 text-3xl font-bold">From Our Leadership</h2>
-            <div className="w-16 h-1 bg-yellow-400 rounded-full mx-auto mt-3" />
+            <h3 className="text-red-900 font-bold text-sm leading-tight">
+              ଶରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର
+            </h3>
+            <p className="text-gray-400 text-xs mt-0.5">Head Teacher</p>
           </div>
-
-          {/* President + Principal — existing 2 cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-            {/* ── President Card ── */}
-            <div className="bg-red-50 rounded-2xl p-7 border border-red-100 shadow-sm
-                            hover:shadow-md transition-all duration-200 flex flex-col gap-5">
-              <div className="flex items-center gap-4">
-                <div className="w-20 h-20 rounded-full overflow-hidden border-4
-                                border-red-900 shadow-md flex-shrink-0">
-                  <img
-                    src="/faculty/Praasident ,Chakradhara pradhan.jpeg"
-                    alt="Chakudhara Pradhan"
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
-                <div>
-                  <p className="text-xs text-yellow-700 font-bold uppercase tracking-widest mb-1">
-                    ସଭାପତି
-                  </p>
-                  <h3 className="text-red-900 font-bold text-base leading-tight">
-                    ଚକୁଧର ପ୍ରଧାନ
-                  </h3>
-                  <p className="text-gray-500 text-xs mt-0.5">Chakudhara Pradhan</p>
-                  <p className="text-gray-400 text-xs">President, Managing Committee</p>
-                </div>
-              </div>
-              <div className="w-full h-px bg-gradient-to-r from-yellow-400 via-red-200 to-transparent" />
-              <p className="text-red-800 font-bold text-sm tracking-wide">
-                ସଭାପତିଙ୍କ କଲମରୁ
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                <b>ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର; ଶିକ୍ଷା କ୍ଷେତ୍ରରେ ଏକ ପରିବର୍ତ୍ତନର ସୁର। ଆଦର୍ଶ ଓ ନୈତିକ
-                ଶିକ୍ଷାର ମନ୍ଦିର, ଏ ଅନୁଷ୍ଠାନ। ଏହାର ଗୁରୁମା, ଗୁରୁଜୀମାନେ ଡାଲିମପ୍ରାପ୍ତ,
-                ଛାତ୍ରବତ୍ସଳ, ସମାୟାନୁବର୍ତ୍ତୀ ତଥା ଶିକ୍ଷାମନଷ୍କ।</b>
-              </p>
-              <div className="mt-auto pt-3 border-t border-red-100">
-                <p className="text-red-900 font-bold text-sm">ଚକୁଧର ପ୍ରଧାନ</p>
-                <p className="text-gray-400 text-xs">
-                  <b>ସଭାପତି, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର ପରିଚାଳନା କମିଟି</b>
-                </p>
-              </div>
-            </div>
-
-            {/* ── Principal Card ── */}
-            <div className="bg-red-50 rounded-2xl p-7 border border-red-100 shadow-sm
-                            hover:shadow-md transition-all duration-200 flex flex-col gap-5">
-              <div className="flex items-center gap-4">
-                <div className="w-20 h-20 rounded-full overflow-hidden border-4
-                                border-red-900 shadow-md flex-shrink-0">
-                  <img
-                    src="/faculty/SaratChandraMohapatraPrincipal.jpeg"
-                    alt="Sarat Chandra Mahapatra"
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
-                <div>
-                  <p className="text-xs text-yellow-700 font-bold uppercase tracking-widest mb-1">
-                    ପ୍ରଧାନ ଗୁରୁଜୀ
-                  </p>
-                  <h3 className="text-red-900 font-bold text-base leading-tight">
-                    ଶରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର
-                  </h3>
-                  <p className="text-gray-500 text-xs mt-0.5">Sarat Chandra Mahapatra</p>
-                  <p className="text-gray-400 text-xs">Head Teacher, Sarada Vidya Mandir</p>
-                </div>
-              </div>
-              <div className="w-full h-px bg-gradient-to-r from-yellow-400 via-red-200 to-transparent" />
-              <p className="text-red-800 font-bold text-sm tracking-wide">
-                ମୋ ପିଲାମାନଙ୍କୁ ପଦେ
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                <b>ଶାରଦା ବିଦ୍ୟାମନ୍ଦିରର ପରିସରକୁ ସ୍ୱାଗତ। ଏହା ତୁମ ଘରଠୁ ଦୂର ଆଉ ଏକ ଘର।
-                ତୁମ ଗୁରୁମା ଓ ଗୁରୁଜୀ ବାପା ମା'ଙ୍କର ବିକଳ୍ପ। ଏହି ପରିସରରେ ସୁଶୃଙ୍ଖଳତା
-                ରକ୍ଷା କରିବା ତୁମର ପ୍ରଥମ ଓ ପ୍ରଧାନ କର୍ତ୍ତବ୍ୟ।</b>
-              </p>
-              <div className="mt-auto pt-3 border-t border-red-100">
-                <p className="text-red-900 font-bold text-sm">ଶରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର</p>
-                <p className="text-gray-400 text-xs">
-                  <b>ପ୍ରଧାନ ଗୁରୁଜୀ, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର</b>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* ── FOUNDERS — 2 new cards below ── */}
-          <div className="mt-10">
-            <div className="text-center mb-8">
-              <p className="text-yellow-600 font-semibold tracking-widest uppercase text-xs mb-2">
-                ପ୍ରତିଷ୍ଠାତା
-              </p>
-              <h3 className="text-red-900 text-2xl font-bold">Our Founders</h3>
-              <div className="w-12 h-1 bg-yellow-400 rounded-full mx-auto mt-3" />
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {founders.map((founder, i) => (
-                <FounderCard key={i} founder={founder} />
-              ))}
-            </div>
-          </div>
-
         </div>
-      </section>
+        <div className="w-full h-px bg-gradient-to-r from-yellow-400 via-red-200 to-transparent" />
+        <p className="text-red-800 font-bold text-xs tracking-wide uppercase">
+          ମୋ ପିଲାମାନଙ୍କୁ ପଦେ
+        </p>
+        <p className="text-gray-600 text-sm leading-relaxed flex-1">
+          ଶାରଦା ବିଦ୍ୟାମନ୍ଦିରର ପରିସରକୁ ସ୍ୱାଗତ। ଏହା ତୁମ ଘରଠୁ ଦୂର ଆଉ ଏକ ଘର।
+          ତୁମ ଗୁରୁମା ଓ ଗୁରୁଜୀ ବାପା ମା'ଙ୍କର ବିକଳ୍ପ।
+        </p>
+        <div className="pt-2 border-t border-red-100">
+          <p className="text-red-900 font-bold text-xs">ଶରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର</p>
+          <p className="text-gray-400 text-xs">ପ୍ରଧାନ ଗୁରୁଜୀ, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର</p>
+        </div>
+      </div>
+
+      {/* ── Card 2: Paban Kumar Nayak ── */}
+      <div className="bg-red-50 rounded-2xl p-6 border border-red-100 shadow-sm
+                      hover:shadow-md transition-all duration-200 flex flex-col gap-4">
+        <div className="flex items-center gap-4">
+          <div className="w-16 h-16 rounded-full overflow-hidden border-4
+                border-red-900 shadow-md flex-shrink-0">
+          <img
+            src="/Paban.jpeg"
+            alt="Paban Kumar Nayak"
+            className="w-full h-full object-cover object-top"
+            />
+            PN
+          </div>
+          <div>
+            <p className="text-xs text-yellow-700 font-bold uppercase tracking-widest mb-0.5">
+              ପ୍ରତିଷ୍ଠାତା
+            </p>
+            <h3 className="text-red-900 font-bold text-sm leading-tight">
+              ଶ୍ରୀ ପବନ କୁମାର ନାୟକ
+            </h3>
+            <p className="text-gray-400 text-xs mt-0.5">M.Com., LLB., B.Ed.</p>
+          </div>
+        </div>
+        <div className="w-full h-px bg-gradient-to-r from-yellow-400 via-red-200 to-transparent" />
+        <p className="text-red-800 font-bold text-xs tracking-wide uppercase">
+          ପ୍ରତିଷ୍ଠାତାଙ୍କ ବଚନ
+        </p>
+        <p className="text-gray-600 text-sm leading-relaxed flex-1">
+          ଶିକ୍ଷା, ସମାଜ ସେବା ଓ ସଂଗଠନ କ୍ଷେତ୍ରରେ ତାଙ୍କର ଅଦମ୍ୟ ଉଦ୍ୟମ ଏହି ବିଦ୍ୟାଳୟର ଭିତ୍ତି।
+          ତାଙ୍କ ଦୂରଦୃଷ୍ଟି ଓ ପରିଶ୍ରମ ଶାରଦା ବିଦ୍ୟାମନ୍ଦିରକୁ ଏକ ଆଦର୍ଶ ଅନୁଷ୍ଠାନ ରୂପେ ଗଢ଼ିଛି।
+        </p>
+        <div className="pt-2 border-t border-red-100">
+          <p className="text-red-900 font-bold text-xs">ଶ୍ରୀ ପବନ କୁମାର ନାୟକ</p>
+          <p className="text-gray-400 text-xs">ପ୍ରତିଷ୍ଠାତା, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର</p>
+        </div>
+      </div>
+
+      {/* ── Card 3: Nirmal Kumar Senapati ── */}
+      <div className="bg-red-50 rounded-2xl p-6 border border-red-100 shadow-sm
+                      hover:shadow-md transition-all duration-200 flex flex-col gap-4">
+        <div className="flex items-center gap-4">
+          <div className="w-16 h-16 rounded-full overflow-hidden border-4
+                          border-red-900 shadow-md flex-shrink-0">
+            <img
+              src="/NirmalKumar.jpeg"
+              alt="Nirmal Kumar Senapati"
+              className="w-full h-full object-cover object-top"
+              onError={(e) => {
+                e.target.style.display = "none";
+                e.target.parentNode.classList.add(
+                  "bg-red-800","flex","items-center","justify-center"
+                );
+                e.target.parentNode.innerHTML =
+                  '<span class="text-white text-xl font-bold">NS</span>';
+              }}
+            />
+          </div>
+          <div>
+            <p className="text-xs text-yellow-700 font-bold uppercase tracking-widest mb-0.5">
+              ପ୍ରତିଷ୍ଠାତା
+            </p>
+            <h3 className="text-red-900 font-bold text-sm leading-tight">
+              ଶ୍ରୀ ନିର୍ମଳ କୁମାର ସେନାପତି
+            </h3>
+            <p className="text-gray-400 text-xs mt-0.5">25 ବର୍ଷ ଅଭିଜ୍ଞତା</p>
+          </div>
+        </div>
+        <div className="w-full h-px bg-gradient-to-r from-yellow-400 via-red-200 to-transparent" />
+        <p className="text-red-800 font-bold text-xs tracking-wide uppercase">
+          ପ୍ରତିଷ୍ଠାତାଙ୍କ ବଚନ
+        </p>
+        <p className="text-gray-600 text-sm leading-relaxed flex-1">
+          ଶିକ୍ଷା ଜଗତରେ ୨୫ ବର୍ଷର ଅଭିଜ୍ଞତା ସହ ସେ ଅଗଣିତ ଛାତ୍ରଛାତ୍ରୀଙ୍କ ଜୀବନ ଆଲୋକିତ କରିଛନ୍ତି।
+          ଜଣେ ସୁ-ସଂଗଠିତ ଶିକ୍ଷକ ଓ ସମାଜ ସେବକ ଭାବେ ସେ ସଦା ବିଦ୍ୟାଳୟର ଗୌରବ।
+        </p>
+        <div className="pt-2 border-t border-red-100">
+          <p className="text-red-900 font-bold text-xs">ଶ୍ରୀ ନିର୍ମଳ କୁମାର ସେନାପତି</p>
+          <p className="text-gray-400 text-xs">ପ୍ରତିଷ୍ଠାତା, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+          
 
       {/* ── WHY CHOOSE US ── */}
       <section className="bg-gray-50 py-16 px-6">

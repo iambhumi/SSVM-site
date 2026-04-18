@@ -138,47 +138,64 @@ export default function Footer() {
           </div>
 
           {/* Col 4 — Contact */}
-          <div>
-            <h4 className="text-yellow-400 font-bold text-base uppercase
-                           tracking-widest mb-5 border-b border-yellow-400/30 pb-2">
-              Contact Us
-            </h4>
-            <ul className="space-y-4 text-sm text-gray-400">
-              <li className="flex items-start gap-3">
-                <span className="text-yellow-400 mt-0.5">📍</span>
-                <span>
-              
-                  SARADA VIDYAMANDIR <br />
-                  AT/PO :BHANDARIPOKHARI <br/>
-                  DIST :BHADRAK <br/>
-                  ODISHA <br/>
-                  PIN :756120<br/>
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-yellow-400">📞</span>
-                <a
-                  href="tel:8895713070, 9556740283, 7847955317"
-                  className="text-gray-400 hover:text-yellow-400 text-sm transition-colors duration-200"
-                >
-                  +91 8895713070, +91 9556740283, +91 7847955317
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-yellow-400">✉️</span>
-                <a
-                  href="saradavidyamandir@gmail.com"
-                  className="text-gray-400 hover:text-yellow-400 text-sm transition-colors duration-200 break-all"
-                >
-                  saradavidyamandir@gmail.com
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-yellow-400">⏰</span>
-                <span>Mon – Sat: 10:00 AM – 4:00 PM</span>
-              </li>
-            </ul>
-          </div>
+        {/* Col 4 — Contact Us */}
+<div>
+  <h4 className="text-yellow-400 font-bold text-base uppercase
+                 tracking-widest mb-5 border-b border-yellow-400/30 pb-2
+                 font-sans">
+    Contact Us
+  </h4>
+  <ul className="space-y-4 font-sans">
+
+    {/* Address */}
+    <li className="flex items-start gap-3">
+      <span className="text-yellow-400 text-sm mt-0.5 not-italic">📍</span>
+      <span className="text-gray-400 text-sm leading-relaxed tracking-normal">
+        Sarada Vidya Mandir<br />
+        AT/PO: Bhandaripokhari<br />
+        Dist: Bhadrak, Odisha<br />
+        PIN: 756120
+      </span>
+    </li>
+
+    {/* Phone */}
+    <li className="flex items-start gap-3">
+      <span className="text-yellow-400 text-sm mt-0.5 not-italic">📞</span>
+      <div className="flex flex-col gap-1">
+        <a href="tel:+918895713070"
+           className="text-gray-400 hover:text-yellow-400 text-sm
+                      tracking-normal transition-colors duration-200">
+          +91 88957 13070
+        </a>
+        <a href="tel:+919556740283"
+           className="text-gray-400 hover:text-yellow-400 text-sm
+                      tracking-normal transition-colors duration-200">
+          +91 95567 40283
+        </a>
+        <a href="tel:+917847955317"
+           className="text-gray-400 hover:text-yellow-400 text-sm
+                      tracking-normal transition-colors duration-200">
+          +91 78479 55317
+        </a>
+      </div>
+    </li>
+
+    {/* Email */}
+    <li className="flex items-start gap-3">
+      <span className="text-yellow-400 text-sm mt-0.5 not-italic">✉️</span>
+      <a
+        href="mailto:saradavidyamandir@gmail.com"
+        className="text-gray-400 hover:text-yellow-400 text-sm
+                   tracking-normal transition-colors duration-200 break-all"
+      >
+        saradavidyamandir@gmail.com
+      </a>
+    </li>
+
+   
+
+  </ul>
+</div>
         </div>
 
         {/* ── COPYRIGHT BAR ── */}

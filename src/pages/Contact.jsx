@@ -171,7 +171,7 @@ export default function Contact() {
                     className="text-gray-600 text-sm hover:text-red-800
                                transition-colors mt-0.5 block break-all"
                   >
-                    info@saradavidyamandir.in
+                    saradavidyamandir@gmail.com
                   </a>
                 </div>
               </div>
