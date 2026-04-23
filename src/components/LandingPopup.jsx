@@ -1,11 +1,20 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 export default function LandingPopup() {
-  const [visible, setVisible] = useState(() => {
-    const seen = sessionStorage.getItem("splashSeen");
-    return !seen;
-  });
-  const [page, setPage] = useState(1); // 1 or 2
+  
+  const [visible, setVisible] = useState(false);
+  const [page, setPage] = useState(1);
+
+  useEffect(() => {
+    // Small delay so the page renders first, then popup appears
+    const timer = setTimeout(() => {
+      setVisible(true);
+    }, 800); // 0.8s delay — adjust as you like
+
+    return () => clearTimeout(timer);
+  }, []); // ← empty array = runs fresh on every page load/refresh
+
+  if (!visible) return null;
 
   const handleClose = () => {
     sessionStorage.setItem("splashSeen", "true");
