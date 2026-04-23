@@ -14,10 +14,9 @@ const academicLinks = [
   { label: "Students' Achievements", path: "/student-achievements" },
   
   { label: "Events",                 path: "/events"               },
+  {label : "Rules & Regulations", path: "/school-rules"         },
 ];
-<Link to="/school-rules" className="hover:underline text-sm">
-  ନିୟମ ଓ ବିଧି (Rules & Regulations)
-</Link>
+
 
 export default function Footer() {
   const ScrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -129,6 +128,8 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+            {/* Right side — Rules & Regulations link */}
+  
           </div>
 
           
@@ -211,14 +212,7 @@ export default function Footer() {
     </a>
   </p>
 
-  {/* Right side — Rules & Regulations link */}
-  <Link
-    to="/school-rules"
-    className="text-gray-400 hover:text-yellow-400 underline
-               underline-offset-2 transition-colors duration-150"
-  >
-    ନିୟମ ଓ ବିଧି &nbsp;|&nbsp; Rules &amp; Regulations
-  </Link>
+  
 
 </div>
 

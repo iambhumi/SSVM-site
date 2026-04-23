@@ -57,7 +57,7 @@ const leaders = [
     name: "ଶରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର",
     nameEng: "Sarat Chandra Mohapatra",
     qual: "M.Com., LLB., B.Ed.",
-    tag: "Chairman, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର",
+    tag: "Chairman & Secretary, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର",
     messageOdia: [
       "ଶାରଦା ବିଦ୍ୟାମନ୍ଦିରର ପରିସରକୁ ସ୍ଵାଗତ। ଏହା ତୁମ ଘରଠୁଁ ଦୂର ଆଉ ଏକ ଘର। ତୁମ ଗୁରୁମା ଓ ଗୁରୁଜୀ ବାପା ମା'ଙ୍କର ବିକଳ୍ପ।",
       "ଏହି ପରିସରର ସ୍ଵଚ୍ଛତା ରକ୍ଷା କରିବା ତୁମର ପ୍ରଥମ ଓ ପ୍ରଧାନ କର୍ତ୍ତବ୍ୟ। ଏହାର ଯଶ ଓ କୀର୍ତ୍ତିକୁ ଅକ୍ଷୁର୍ଣ ରଖ୍ ସୁନାଗରିକ ହୋଇ ବାହାରିଲେ ଦେଶ ଓ ଦଶର ଉନ୍ନତି ହେବ।",
@@ -72,12 +72,12 @@ const leaders = [
   {
     id: "president",
     image: "/faculty/Praasident ,Chakradhara pradhan.jpeg",
-    roleEng: "President, Managing Committee",
+    roleEng: "Chairman, President, Managing Committee",
     roleOdia: "ସଭାପତି, ପରିଚାଳନା କମିଟି",
     name: "ଚକ୍ରଧର ପ୍ରଧାନ",
     nameEng: "Chakradhara Pradhan",
     qual: "",
-    tag: "President, Managing Committee",
+    tag: "Chairman,President, Managing Committee",
     messageOdia: [
       "ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର — ଶିକ୍ଷା କ୍ଷେତ୍ରରେ ଏକ ପରିବର୍ତ୍ତନର ସ୍ୱର। ଆଦର୍ଶ ଓ ନୈତିକ ଶିକ୍ଷାର ମନ୍ଦିର, ଏ ଅନୁଷ୍ଠାନ।",
       "ଏହାର ଗୁରୁମା, ଗୁରୁଜୀମାନେ ତାଲିମପ୍ରାପ୍ତ, ଛାତ୍ରବତ୍ସଳ, ସମୟାନୁବର୍ତ୍ତୀ ତଥା ଶିକ୍ଷାମନସ୍କ। ବିଭିନ୍ନ ପ୍ରତିଯୋଗିତାରେ 'ଶାରଦା'ର ବିଦ୍ୟାର୍ଥୀ ଜିଲ୍ଲାରେ ଆଗୁଆ।",

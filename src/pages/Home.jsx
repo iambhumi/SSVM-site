@@ -305,7 +305,7 @@ export default function Home() {
       <div className="flex items-center gap-3 mb-6">
         <div className="w-8 h-0.5 bg-yellow-400 rounded-full" />
         <p className="text-red-800 font-bold text-xs uppercase tracking-widest">
-          Chairman
+          Chairman & Secretary
         </p>
         <div className="flex-1 h-0.5 bg-yellow-400/30 rounded-full" />
       </div>
@@ -333,7 +333,7 @@ export default function Home() {
             <div>
               <span className="inline-block bg-yellow-400 text-red-900 text-xs font-bold
                                px-2 py-0.5 rounded-full uppercase tracking-wide mb-1">
-                Secretary
+                Chairman & Secretary
               </span>
               <h3 className="text-white font-bold text-sm leading-tight">
                 ଶରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର
@@ -348,7 +348,7 @@ export default function Home() {
           </p>
           <div className="pt-2 border-t border-white/10">
             <p className="text-yellow-400 font-bold text-xs">ଶରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର</p>
-            <p className="text-white/50 text-xs">Chairman, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର</p>
+            <p className="text-white/50 text-xs">Chairman & Secretary, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର</p>
           </div>
         </div>
 
@@ -373,7 +373,7 @@ export default function Home() {
             <div>
               <span className="inline-block bg-yellow-400 text-red-900 text-xs font-bold
                                px-2 py-0.5 rounded-full uppercase tracking-wide mb-1">
-                Chairman
+                Chairman 
               </span>
               <h3 className="text-white font-bold text-sm leading-tight">
                 Chakradhara Pradhan
@@ -390,7 +390,7 @@ export default function Home() {
           </p>
           <div className="pt-2 border-t border-white/10">
             <p className="text-yellow-400 font-bold text-xs">Chakradhara Pradhan</p>
-            <p className="text-white/50 text-xs">Chairman, ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର</p>
+            <p className="text-white/50 text-xs">Chairman  ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର</p>
           </div>
         </div>
 
