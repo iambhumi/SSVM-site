@@ -17,7 +17,7 @@ const academicLinks = [
 ];
 
 export default function Footer() {
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const ScrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <>
@@ -39,10 +39,11 @@ export default function Footer() {
           }}
         />
         <p className="relative z-10 text-yellow-400 text-xl md:text-3xl font-bold tracking-wide">
-          ଜ୍ଞାନ ହିଁ ପରମ ଶକ୍ତି
+          
+        ଆଦର୍ଶ ଓ ନୈତିକ ଶିକ୍ଷାର ମନ୍ଦିର
         </p>
         <p className="relative z-10 text-white/70 text-sm italic mt-1">
-          — Knowledge is the Ultimate Power
+          - A temple of ideal and moral education 
         </p>
       </div>
 

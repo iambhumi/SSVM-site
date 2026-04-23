@@ -310,7 +310,7 @@ export default function Home() {
         <div className="flex-1 h-0.5 bg-yellow-400/30 rounded-full" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
 
         {/* Chairman 1 — Sarat Chandra Mohapatra */}
         <div className="bg-gradient-to-br from-red-900 to-red-800 rounded-2xl p-6
@@ -333,7 +333,7 @@ export default function Home() {
             <div>
               <span className="inline-block bg-yellow-400 text-red-900 text-xs font-bold
                                px-2 py-0.5 rounded-full uppercase tracking-wide mb-1">
-                Chairman
+                Secretary
               </span>
               <h3 className="text-white font-bold text-sm leading-tight">
                 ଶରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର
@@ -343,8 +343,8 @@ export default function Home() {
           </div>
           <div className="w-full h-px bg-gradient-to-r from-yellow-400 via-yellow-200/30 to-transparent" />
           <p className="text-white/80 text-sm leading-relaxed flex-1">
-            ବିଦ୍ୟାଳୟର ଚେୟାରମ୍ୟାନ ଭାବେ ଶିକ୍ଷାର ଗୁଣମାନ ଓ ଛାତ୍ରଛାତ୍ରୀଙ୍କ
-            ସର୍ବାଙ୍ଗୀଣ ବିକାଶ ପ୍ରତି ସଦା ପ୍ରତିଶ୍ରୁତିବଦ୍ଧ।
+            ଶାରଦା ବିଦ୍ୟାମନ୍ଦିରର ପରିସରକୁ ସ୍ଵାଗତ । ଏହା ତୁମ ଘରଠୁଁ ଦୂର ଆଉ ଏକ ଘର । ତୁମ ଗୁରୁମା ଓ ଗୁରୁଜୀ ବାପା ମା’ଙ୍କର ବିକଳ୍ପ । ଏହି ପରିସରର ସ୍ଵଚ୍ଛତା ରକ୍ଷା କରିବା ତୁମର ପ୍ରଥମ ଓ ପ୍ରଧାନ କର୍ତ୍ତବ୍ୟ । ଏହାର ଯଶ ଓ କୀର୍ତ୍ତିକୁ ଅକ୍ଷୁର୍ଣ ରଖ୍ ସୁନାଗରିକ ହୋଇ ବାହାରିଲେ ଦେଶ ଓ ଦଶର ଉନ୍ନତି ହେବ। ଶାରୀରିକ ସୁସ୍ଥତା ସହ ଆଧ୍ୟାତ୍ମିକ ବିକାଶ ପାଇଁ ମଧ୍ୟ ତୁମ ଗୁରୁମା ଗୁରୁଜୀମାନେ ଯତ୍ନଶୀଳ । ନିୟମରେ ବନ୍ଧା ହୋଇ ପରିବାରକୁ ନିଜର କରି ପାରିଲେ ତୁମର ଉନ୍ନତି ସୁନିଶ୍ଚିତ ।
+            ଏକ ସୁନ୍ଦର ଭବିଷ୍ୟତ, ସୁବ୍ୟବସ୍ଥିତ ସମାଜ, ଶୃଙ୍ଗଳିତ ପରିବେଶ ତୁମ ଅପେକ୍ଷାରେ । ମହାପ୍ରଭୁ ଜଗନ୍ନାଥ ତୁମ ସମସ୍ତଙ୍କର ମଙ୍ଗଳ ବିଧାନ କରନ୍ତୁ । ଏହାହିଁ କାମନା ।
           </p>
           <div className="pt-2 border-t border-white/10">
             <p className="text-yellow-400 font-bold text-xs">ଶରତ ଚନ୍ଦ୍ର ମହାପାତ୍ର</p>
@@ -383,8 +383,10 @@ export default function Home() {
           </div>
           <div className="w-full h-px bg-gradient-to-r from-yellow-400 via-yellow-200/30 to-transparent" />
           <p className="text-white/80 text-sm leading-relaxed flex-1">
-            ପରିଚାଳନା କମିଟିର ଅଧ୍ୟକ୍ଷ ଭାବେ ବିଦ୍ୟାଳୟର ପ୍ରଶାସନ ଓ ଉନ୍ନୟନ
-            ପ୍ରତି ଅକ୍ଳାନ୍ତ ଭାବେ କାର୍ଯ୍ୟ କରି ଆସୁଛନ୍ତି।
+            ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର; ଶିକ୍ଷା କ୍ଷେତ୍ରରେ ଏକ ପରିବର୍ତ୍ତନର ସ୍ୱର। ଆଦର୍ଶ ଓ ନୈତିକ ଶିକ୍ଷାର ମନ୍ଦିର, ଏ ଅନୁଷ୍ଠାନ । ଏହାର ଗୁରୁମା, ଗୁରୁଜୀମାନେ ତାଲିମପ୍ରାପ୍ତ, ଛାତ୍ରବତ୍ସଳ, ସମାୟାନୁବର୍ତ୍ତୀ ତଥା ଶିକ୍ଷାମନସ୍କ। ନୂଆ ଚିନ୍ତା ଓ ଚେତନାର ଦ୍ୟୋତକ ଏମାନେ ।
+            ବିଦ୍ୟାର୍ଥୀଙ୍କୁ ଦିଗଦର୍ଶନ ଦେବାରେ ଏମାନେ ସମର୍ଥ । ବିଭିନ୍ନ ପ୍ରତିଯୋଗିତା ମୂଳକ ପରୀକ୍ଷାରେ ‘ଶାରଦା’ର ବିଦ୍ୟାର୍ଥୀ ଜିଲ୍ଲାରେ ଆଗୁଆ। ବୃଦ୍ଧି ପରୀକ୍ଷାରେ କୃତକାର୍ଯ୍ୟ ହେବାରେ ଏହାର ବିଦ୍ୟାର୍ଥୀଗଣ ମାହିର । ମ୍ୟାଟ୍ରିକ ଫଳ ମଧ୍ଯ ଖୁବ୍ ସନ୍ତୋଷଜନକ । ଶତପ୍ରତିଶତ ସଫଳତା ହାସଲ କରିବାରେ ଏହାର ରେକର୍ଡ଼ ରହିଛି । ଆଜି ଏହାର ପୁରାତନ ବିଦ୍ୟାର୍ଥୀଗଣ ବିଭିନ୍ନ ସରକାରୀ ତ‌ଥା ବେସରକାରୀ ଅନୁଷ୍ଠାନରେ ଉଚ୍ଚ ଦରମାରେ ନିଯୁକ୍ତି ପାଇ ଏ ଅଞ୍ଚଳର ଗୌରବ ବୃଦ୍ଧି କରିପାରିଛନ୍ତି । ମୋଟ ଉପରେ
+            କହିବାକୁ ଗଲେ ମଣିଷ ତିଆରି କାରଖାନା ହେଉଛି ଶାରଦା ବିଦ୍ୟାମନ୍ଦିର । ଏ ଅନୁଷ୍ଠାନର
+            ପରିପ୍ପଳନା କମିଟିର ସଭାପତି ହିସାବରେ ମୁଁ ବେଶ୍ ଆନନ୍ଦିତ ଓ ଗର୍ବିତ ।
           </p>
           <div className="pt-2 border-t border-white/10">
             <p className="text-yellow-400 font-bold text-xs">Chakradhara Pradhan</p>

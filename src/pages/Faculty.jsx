@@ -38,7 +38,7 @@ const teachingStaff = [
 
 const nonTeachingStaff = [
   { id: 1, name: "Malati Lata Barik",   role: "Non-Teaching Staff", photo: "MalatiLata.jpeg" },
-  { id: 2, name: "Susanta Kumar Panda", role: "Non-Teaching Staff", photo: "" },
+  { id: 2, name: "Susanta Kumar Panda", role: "Non-Teaching Staff", photo: "SusantaKumar.jpeg" },
   { id: 3, name: "Basanta Jena",        role: "Non-Teaching Staff", photo: "BasantaLata Jena.jpeg" },
   { id: 4, name: "Mamakalpita Rout",    role: "Non-Teaching Staff", photo: "Mamakalpita.jpeg" },
 ];
@@ -78,7 +78,7 @@ function FacultyCard({ person, showRole = false }) {
           <img
             src={photoSrc}
             alt={person.name}
-            className="w-full h-full object-cover object-top"
+            className={`w-full h-full object-cover ${person.id === 2 ? 'object-center' : 'object-top'}`}
             onError={() => setImgError(true)}
           />
         ) : (
