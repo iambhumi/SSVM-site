@@ -5,7 +5,7 @@ import About from "./pages/About";
 import StudentAchievements from "./pages/StudentAchievements";
 import Faculty from "./pages/Faculty";
 import Facility from "./pages/Facility";
-
+import SchoolRules from "./pages/SchoolRules";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
 
@@ -22,7 +22,7 @@ export default function App() {
           <Route path="student-achievements" element={<StudentAchievements />} />
           <Route path="faculty" element={<Faculty />} />
           <Route path="facility" element={<Facility />} />
-          
+          <Route path="/school-rules" element={<SchoolRules />} />
           <Route path="events" element={<Events />} />
           
           

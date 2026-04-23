@@ -29,7 +29,7 @@ const notices = [
   "Admissions open for 2026-27 session",
   "Our student cleared NMMS Scholarship 2025",
   "Annual Day celebration on 5th April 2026",
-  "Class 10 Board Exam — 98% pass rate!",
+  "Class 10 Board Exam — 100% pass rate!",
   "Art & Culture Fest on 10th April 2026",
 ];
 

@@ -15,6 +15,9 @@ const academicLinks = [
   
   { label: "Events",                 path: "/events"               },
 ];
+<Link to="/school-rules" className="hover:underline text-sm">
+  ନିୟମ ଓ ବିଧି (Rules & Regulations)
+</Link>
 
 export default function Footer() {
   const ScrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -128,7 +131,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 4 — Contact */}
+          
         {/* Col 4 — Contact Us */}
 <div>
   <h4 className="text-yellow-400 font-bold text-base uppercase
@@ -190,15 +193,36 @@ export default function Footer() {
         </div>
 
         {/* ── COPYRIGHT BAR ── */}
-        <hr className="border-gray-700 my-4" />
-        <p className="text-gray-400 text-xs mt-1 text-center">
-          © {new Date().getFullYear()} All rights reserved by{" "}
-          <a href="https://swiftrise.in" target="_blank" rel="noopener noreferrer"
-             className="text-yellow-400 hover:text-yellow-300 underline underline-offset-2 transition-colors duration-150">
-            SwiftRise Solution Pvt.Ltd 
-          </a>
-        </p>
+<hr className="border-gray-700 my-4" />
+<div className="flex flex-col sm:flex-row items-center justify-between
+                gap-2 px-6 pb-6 text-xs text-gray-400">
 
+  {/* Left side — copyright */}
+  <p>
+    © {new Date().getFullYear()} All rights reserved by{" "}
+    <a
+      href="https://swiftrise.in"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-yellow-400 hover:text-yellow-300 underline
+                 underline-offset-2 transition-colors duration-150"
+    >
+      SwiftRise Solution Pvt.Ltd.
+    </a>
+  </p>
+
+  {/* Right side — Rules & Regulations link */}
+  <Link
+    to="/school-rules"
+    className="text-gray-400 hover:text-yellow-400 underline
+               underline-offset-2 transition-colors duration-150"
+  >
+    ନିୟମ ଓ ବିଧି &nbsp;|&nbsp; Rules &amp; Regulations
+  </Link>
+
+</div>
+
+        
       </footer>
     </>
   );
